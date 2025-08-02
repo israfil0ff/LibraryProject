@@ -184,3 +184,7 @@ C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\AutoMappe
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\Library.DBO.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\Library.DBO.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\obj\Debug\net8.0\Library.API.sourcelink.json

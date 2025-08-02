@@ -17,3 +17,4 @@ C:\Users\Omer\Desktop\C# ders\Library.API\Library.DAL\obj\Debug\net8.0\Library.D
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.DAL\obj\Debug\net8.0\ref\Library.DAL.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.DAL\bin\Debug\net8.0\Library.DBO.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.DAL\bin\Debug\net8.0\Library.DBO.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.DAL\obj\Debug\net8.0\Library.DAL.sourcelink.json

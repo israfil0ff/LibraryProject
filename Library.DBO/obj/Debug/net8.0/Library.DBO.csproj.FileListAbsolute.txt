@@ -13,3 +13,4 @@ C:\Users\Omer\Desktop\C# ders\Library.API\Library.DBO\obj\Debug\net8.0\Library.D
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.DBO\obj\Debug\net8.0\refint\Library.DBO.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.DBO\obj\Debug\net8.0\Library.DBO.pdb
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.DBO\obj\Debug\net8.0\ref\Library.DBO.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.DBO\obj\Debug\net8.0\Library.DBO.sourcelink.json

@@ -17,3 +17,4 @@ C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.B
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.DBO.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.DBO.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.sourcelink.json

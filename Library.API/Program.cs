@@ -2,8 +2,14 @@ using Library.BLL;
 using Library.DAL;
 using Library.DAL.Context;
 using Microsoft.EntityFrameworkCore;
-
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Library.DBO; 
+using Library.API.Validators; 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AuthorCreateDto>());
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddControllers();
