@@ -5,7 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Library.DBO; 
-using Library.API.Validators; 
+using Library.API.Validators;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers()
@@ -23,8 +26,14 @@ builder.Services.AddDbContext<LibraryDbContext>(options =>
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IBookService, BookService>();
 
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
+
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 app.MapControllers();
 app.Run();
+app.UseExceptionHandler();

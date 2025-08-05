@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\omer\\desktop\\c# ders\\library.api\\library.api\\global exception handler\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\global exception handler\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\c# ders\\library.api\\library.dbo\\validators\\bookupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\validators\\bookupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -90,11 +94,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T17:35:37.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BookUpdateDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Validators\\BookUpdateDtoValidator.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Validators\\BookUpdateDtoValidator.cs",
@@ -107,13 +124,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BookCreateDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Validators\\BookCreateDtoValidator.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Validators\\BookCreateDtoValidator.cs",
               "ToolTip": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Validators\\BookCreateDtoValidator.cs",
               "RelativeToolTip": "Library.DBO\\Validators\\BookCreateDtoValidator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-02T14:59:53.716Z",
               "EditorCaption": ""
@@ -126,14 +143,14 @@
               "RelativeDocumentMoniker": "Library.API\\Program.cs",
               "ToolTip": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.API\\Program.cs",
               "RelativeToolTip": "Library.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-20T17:40:10.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthorUpdateDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Validators\\AuthorUpdateDtoValidator.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Validators\\AuthorUpdateDtoValidator.cs",
@@ -146,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthorCreateDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Validators\\AuthorCreateDtoValidator.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Validators\\AuthorCreateDtoValidator.cs",
@@ -159,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.BLL\\BookService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\BookService.cs",
@@ -172,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.BLL\\Mapper\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Mapper\\MappingProfile.cs",
@@ -185,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Books.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Books.cs",
               "RelativeDocumentMoniker": "Library.Entities\\Books.cs",
@@ -198,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "BookUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\BookUpdateDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\BookUpdateDto.cs",
@@ -211,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "BookCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\BookCreateDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\BookCreateDto.cs",
@@ -224,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.API\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\BookController.cs",
@@ -237,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AuthorController.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.API\\Controllers\\AuthorController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\AuthorController.cs",
@@ -250,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AuthorService.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.BLL\\AuthorService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\AuthorService.cs",
@@ -263,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Author.cs",
               "RelativeDocumentMoniker": "Library.Entities\\Author.cs",
@@ -276,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BookDTO.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\BookDTO.cs",
               "RelativeDocumentMoniker": "Library.DBO\\BookDTO.cs",
@@ -289,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "IBookService.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.BLL\\Interfaces\\IBookService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IBookService.cs",
@@ -302,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IAuthorService.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.BLL\\Interfaces\\IAuthorService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IAuthorService.cs",
@@ -315,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "AuthorDTO.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\AuthorDTO.cs",
               "RelativeDocumentMoniker": "Library.DBO\\AuthorDTO.cs",
@@ -328,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AuthorUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\AuthorUpdateDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\AuthorUpdateDto.cs",
@@ -341,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "AuthorCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\AuthorCreateDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\AuthorCreateDto.cs",

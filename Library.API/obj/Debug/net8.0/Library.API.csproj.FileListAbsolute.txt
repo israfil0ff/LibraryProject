@@ -188,3 +188,5 @@ C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\FluentVal
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\obj\Debug\net8.0\Library.API.sourcelink.json
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
