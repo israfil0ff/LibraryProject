@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DAL\\Library.DAL.csproj": {}
+    "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DAL\\Library.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DAL\\Library.DAL.csproj": {
+    "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DAL\\Library.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DAL\\Library.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DAL\\Library.DAL.csproj",
         "projectName": "Library.DAL",
-        "projectPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DAL\\Library.DAL.csproj",
-        "packagesPath": "C:\\Users\\Omer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DAL\\obj\\",
+        "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DAL\\Library.DAL.csproj",
+        "packagesPath": "C:\\Users\\volunteer12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Omer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\volunteer12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Library.DBO.csproj": {
-                "projectPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Library.DBO.csproj"
+              "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\Library.DBO.csproj": {
+                "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\Library.DBO.csproj"
               },
-              "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Library.Entities.csproj": {
-                "projectPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Library.Entities.csproj"
+              "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj": {
+                "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj"
               }
             }
           }
@@ -50,8 +51,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -83,21 +83,13 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[9.0.7, )"
-            },
-            "Microsoft.Extensions.Configuration.FileExtensions": {
-              "target": "Package",
-              "version": "[9.0.7, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[9.0.7, )"
-            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[8.2.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -120,24 +112,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Library.DBO.csproj": {
+    "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\Library.DBO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Library.DBO.csproj",
+        "projectUniqueName": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\Library.DBO.csproj",
         "projectName": "Library.DBO",
-        "projectPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\Library.DBO.csproj",
-        "packagesPath": "C:\\Users\\Omer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.DBO\\obj\\",
+        "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\Library.DBO.csproj",
+        "packagesPath": "C:\\Users\\volunteer12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Omer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\volunteer12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -146,14 +138,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Library.Entities.csproj": {
-                "projectPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Library.Entities.csproj"
+              "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj": {
+                "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj"
               }
             }
           }
@@ -167,8 +160,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -198,6 +190,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[9.0.3, )"
@@ -219,24 +215,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Library.Entities.csproj": {
+    "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Library.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj",
         "projectName": "Library.Entities",
-        "projectPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\Library.Entities.csproj",
-        "packagesPath": "C:\\Users\\Omer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omer\\Desktop\\C# ders\\Library.API\\Library.Entities\\obj\\",
+        "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj",
+        "packagesPath": "C:\\Users\\volunteer12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Omer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\volunteer12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -245,6 +241,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -262,8 +259,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -293,6 +289,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[9.0.3, )"
@@ -314,7 +314,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

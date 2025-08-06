@@ -51,4 +51,17 @@ public class BookController : ControllerBase
         _service.Delete(id);
         return Ok();
     }
+    //private readonly ILogger<BookController> _logger;
+
+    //public BookController(ILogger<BookController> logger)
+    //{
+    //    _logger = logger;
+    //}
+
+    //public IActionResult Index()
+    //{
+    //   // _logger.LogInformation("Index səhifəsi yükləndi.");
+    //    return Ok();
+    //}
+
 }

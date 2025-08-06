@@ -10,11 +10,14 @@ namespace Library.API.Controllers;
 public class AuthorController : ControllerBase
 {
     private readonly IAuthorService _service;
+    private readonly ILogger<AuthorController> _logger;
 
-    public AuthorController(IAuthorService service)
+    public AuthorController(IAuthorService service, ILogger<AuthorController> logger)
     {
         _service = service;
+        _logger = logger;
     }
+
 
     [HttpGet]
     public IActionResult GetAll()
@@ -30,6 +33,9 @@ public class AuthorController : ControllerBase
         if (author == null) return NotFound();
         return Ok(author);
     }
+  //  private readonly ILogger<AuthorController> _logger;
+
+ 
 
     [HttpPost]
     public IActionResult Add([FromBody] DBO.AuthorCreateDto authorDto)
