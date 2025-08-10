@@ -1,0 +1,59 @@
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.BLL.deps.json
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.BLL.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.BLL.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.DAL.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.Entities.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.DAL.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.Entities.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfoInputs.cache
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfo.cs
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library..6B42F545.Up2Date
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\refint\Library.BLL.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.DBO.dll
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\bin\Debug\net8.0\Library.DBO.pdb
+C:\Users\Omer\Desktop\C# ders\Library.API\Library.BLL\obj\Debug\net8.0\Library.BLL.sourcelink.json
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.DAL.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.DBO.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.Entities.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.DAL.pdb
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.DBO.pdb
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.Entities.pdb
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfoInputs.cache
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfo.cs
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.sourcelink.json
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library..6B42F545.Up2Date
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\refint\Library.BLL.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\Library.BLL.pdb
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.BLL.deps.json
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.BLL.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.BLL.pdb
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.BLL.deps.json
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.BLL.dll
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.BLL.pdb
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.DAL.dll
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.DBO.dll
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.Entities.dll
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.DAL.pdb
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.DBO.pdb
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.Entities.pdb
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfoInputs.cache
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfo.cs
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library..6B42F545.Up2Date
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.dll
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\refint\Library.BLL.dll
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.pdb
+C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll

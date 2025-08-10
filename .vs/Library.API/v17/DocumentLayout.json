@@ -1,0 +1,428 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.bll\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.api\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7720024B-D101-429A-AE2B-05CD866631B0}|Library.Entities\\Library.Entities.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.entities\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7720024B-D101-429A-AE2B-05CD866631B0}|Library.Entities\\Library.Entities.csproj|solutionrelative:library.entities\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7720024B-D101-429A-AE2B-05CD866631B0}|Library.Entities\\Library.Entities.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7720024B-D101-429A-AE2B-05CD866631B0}|Library.Entities\\Library.Entities.csproj|solutionrelative:library.entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.api\\global exception handler\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\global exception handler\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\authorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\authorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.bll\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.bll\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.api\\library.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\library.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dal\\migrations\\20250720175342_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|solutionrelative:library.dal\\migrations\\20250720175342_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dal\\library.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|solutionrelative:library.dal\\library.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\validators\\bookupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\validators\\bookupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\validators\\bookcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\validators\\bookcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\validators\\authorupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\validators\\authorupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\validators\\authorcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\validators\\authorcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.bll\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\bookupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\bookupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.bll\\interfaces\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\omer\\desktop\\libraryproject-main\\library.dbo\\authorupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\authorupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Program.cs",
+              "RelativeDocumentMoniker": "Library.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Program.cs",
+              "RelativeToolTip": "Library.API\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4vyMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T17:40:10.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AuthorCreateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\AuthorCreateDtoValidator.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\Validators\\AuthorCreateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\AuthorCreateDtoValidator.cs",
+              "RelativeToolTip": "Library.DBO\\Validators\\AuthorCreateDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T14:58:28.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\BookService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\BookService.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\BookService.cs",
+              "RelativeToolTip": "Library.BLL\\BookService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:27:24.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\BookDTO.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\BookDTO.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\BookDTO.cs",
+              "RelativeToolTip": "Library.DBO\\BookDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:06:51.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Library.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\appsettings.json",
+              "RelativeToolTip": "Library.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-06T07:22:04.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.Entities\\Author.cs",
+              "RelativeDocumentMoniker": "Library.Entities\\Author.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.Entities\\Author.cs",
+              "RelativeToolTip": "Library.Entities\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T22:05:37.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Books.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.Entities\\Books.cs",
+              "RelativeDocumentMoniker": "Library.Entities\\Books.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.Entities\\Books.cs",
+              "RelativeToolTip": "Library.Entities\\Books.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T22:05:44.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\AuthorDTO.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\AuthorDTO.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\AuthorDTO.cs",
+              "RelativeToolTip": "Library.DBO\\AuthorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:05:35.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthorController.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Controllers\\AuthorController.cs",
+              "RelativeDocumentMoniker": "Library.API\\Controllers\\AuthorController.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Controllers\\AuthorController.cs",
+              "RelativeToolTip": "Library.API\\Controllers\\AuthorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:37:49.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthorService.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\AuthorService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\AuthorService.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\AuthorService.cs",
+              "RelativeToolTip": "Library.BLL\\AuthorService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowDwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:18:10.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthorUpdateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\AuthorUpdateDtoValidator.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\Validators\\AuthorUpdateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\AuthorUpdateDtoValidator.cs",
+              "RelativeToolTip": "Library.DBO\\Validators\\AuthorUpdateDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T14:58:59.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BookCreateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\BookCreateDtoValidator.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\Validators\\BookCreateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\BookCreateDtoValidator.cs",
+              "RelativeToolTip": "Library.DBO\\Validators\\BookCreateDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T14:59:53.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BookUpdateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\BookUpdateDtoValidator.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\Validators\\BookUpdateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\Validators\\BookUpdateDtoValidator.cs",
+              "RelativeToolTip": "Library.DBO\\Validators\\BookUpdateDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T15:00:22.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAtwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T17:35:37.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Library.DAL.csproj",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DAL\\Library.DAL.csproj",
+              "RelativeDocumentMoniker": "Library.DAL\\Library.DAL.csproj",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DAL\\Library.DAL.csproj",
+              "RelativeToolTip": "Library.DAL\\Library.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-06T07:15:46.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250720175342_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DAL\\Migrations\\20250720175342_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Library.DAL\\Migrations\\20250720175342_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DAL\\Migrations\\20250720175342_InitialCreate.cs",
+              "RelativeToolTip": "Library.DAL\\Migrations\\20250720175342_InitialCreate.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:37:48.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Library.API.csproj",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Library.API.csproj",
+              "RelativeDocumentMoniker": "Library.API\\Library.API.csproj",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Library.API.csproj",
+              "RelativeToolTip": "Library.API\\Library.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-06T07:49:47.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Mapper\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\Mapper\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Mapper\\MappingProfile.cs",
+              "RelativeToolTip": "Library.BLL\\Mapper\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:09:35.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BookUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\BookUpdateDto.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\BookUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\BookUpdateDto.cs",
+              "RelativeToolTip": "Library.DBO\\BookUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:43:33.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\BookCreateDto.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\BookCreateDto.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\BookCreateDto.cs",
+              "RelativeToolTip": "Library.DBO\\BookCreateDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:28:37.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Library.API\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Library.API\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:44:55.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "Library.BLL\\Interfaces\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:23:25.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IAuthorService.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Interfaces\\IAuthorService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IAuthorService.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Interfaces\\IAuthorService.cs",
+              "RelativeToolTip": "Library.BLL\\Interfaces\\IAuthorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:15:17.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AuthorUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\AuthorUpdateDto.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\AuthorUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\AuthorUpdateDto.cs",
+              "RelativeToolTip": "Library.DBO\\AuthorUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:42:16.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthorCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\AuthorCreateDto.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\AuthorCreateDto.cs",
+              "ToolTip": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.DBO\\AuthorCreateDto.cs",
+              "RelativeToolTip": "Library.DBO\\AuthorCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T21:41:40.909Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
