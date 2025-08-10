@@ -24,6 +24,7 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.Entities\obj\D
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.Entities\obj\Debug\net8.0\refint\Library.Entities.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.Entities\obj\Debug\net8.0\Library.Entities.pdb
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.Entities\obj\Debug\net8.0\ref\Library.Entities.dll
+<<<<<<< HEAD
 C:\Users\Omer\Desktop\LibraryProject-main\Library.Entities\bin\Debug\net8.0\Library.Entities.deps.json
 C:\Users\Omer\Desktop\LibraryProject-main\Library.Entities\bin\Debug\net8.0\Library.Entities.dll
 C:\Users\Omer\Desktop\LibraryProject-main\Library.Entities\bin\Debug\net8.0\Library.Entities.pdb
@@ -36,3 +37,5 @@ C:\Users\Omer\Desktop\LibraryProject-main\Library.Entities\obj\Debug\net8.0\Libr
 C:\Users\Omer\Desktop\LibraryProject-main\Library.Entities\obj\Debug\net8.0\refint\Library.Entities.dll
 C:\Users\Omer\Desktop\LibraryProject-main\Library.Entities\obj\Debug\net8.0\Library.Entities.pdb
 C:\Users\Omer\Desktop\LibraryProject-main\Library.Entities\obj\Debug\net8.0\ref\Library.Entities.dll
+=======
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2

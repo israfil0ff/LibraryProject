@@ -30,6 +30,7 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DBO\obj\Debug\
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DBO\obj\Debug\net8.0\refint\Library.DBO.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DBO\obj\Debug\net8.0\Library.DBO.pdb
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DBO\obj\Debug\net8.0\ref\Library.DBO.dll
+<<<<<<< HEAD
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DBO\bin\Debug\net8.0\Library.DBO.deps.json
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DBO\bin\Debug\net8.0\Library.DBO.dll
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DBO\bin\Debug\net8.0\Library.DBO.pdb
@@ -45,3 +46,5 @@ C:\Users\Omer\Desktop\LibraryProject-main\Library.DBO\obj\Debug\net8.0\Library.D
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DBO\obj\Debug\net8.0\refint\Library.DBO.dll
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DBO\obj\Debug\net8.0\Library.DBO.pdb
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DBO\obj\Debug\net8.0\ref\Library.DBO.dll
+=======
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2

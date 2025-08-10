@@ -38,6 +38,7 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DAL\obj\Debug\
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DAL\obj\Debug\net8.0\Library..61D7EBAF.Up2Date
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DAL\obj\Debug\net8.0\Library.DAL.genruntimeconfig.cache
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.DAL\obj\Debug\net8.0\ref\Library.DAL.dll
+<<<<<<< HEAD
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DAL\bin\Debug\net8.0\Library.DAL.deps.json
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DAL\bin\Debug\net8.0\Library.DAL.runtimeconfig.json
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DAL\bin\Debug\net8.0\Library.DAL.dll
@@ -57,3 +58,5 @@ C:\Users\Omer\Desktop\LibraryProject-main\Library.DAL\obj\Debug\net8.0\refint\Li
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DAL\obj\Debug\net8.0\Library.DAL.pdb
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DAL\obj\Debug\net8.0\Library.DAL.genruntimeconfig.cache
 C:\Users\Omer\Desktop\LibraryProject-main\Library.DAL\obj\Debug\net8.0\ref\Library.DAL.dll
+=======
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2

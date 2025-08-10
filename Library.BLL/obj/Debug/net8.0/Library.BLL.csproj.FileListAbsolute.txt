@@ -38,6 +38,7 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.BLL.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\bin\Debug\net8.0\Library.BLL.pdb
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll
+<<<<<<< HEAD
 C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.BLL.deps.json
 C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.BLL.dll
 C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\bin\Debug\net8.0\Library.BLL.pdb
@@ -57,3 +58,5 @@ C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.B
 C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\refint\Library.BLL.dll
 C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\Library.BLL.pdb
 C:\Users\Omer\Desktop\LibraryProject-main\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll
+=======
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2

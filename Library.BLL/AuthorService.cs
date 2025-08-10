@@ -20,11 +20,15 @@ public class AuthorService : IAuthorService
 
     public List<AuthorDto> GetAll()
     {
+<<<<<<< HEAD
         var authors = _context.Authors
             .Include(a => a.Books)
             .Where(a => !a.IsDeleted) 
             .ToList();
 
+=======
+        var authors = _context.Authors.Include(a => a.Books).ToList();
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
         return _mapper.Map<List<AuthorDto>>(authors);
     }
 
@@ -52,6 +56,7 @@ public class AuthorService : IAuthorService
 
     public void Delete(int id)
     {
+<<<<<<< HEAD
         var author = _context.Authors.FirstOrDefault(a => a.Id == id);
         if (author == null)
             throw new Exception("Author not found");
@@ -59,6 +64,16 @@ public class AuthorService : IAuthorService
         author.IsDeleted = true; 
         _context.SaveChanges();
     }
+=======
+        var author = _context.Authors.Find(id);
+        if (author != null)
+        {
+            _context.Authors.Remove(author);
+            _context.SaveChanges();
+        }
+    }
+}
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
 
 
 

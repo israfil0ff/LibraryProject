@@ -6123,23 +6123,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Omer\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\volunteer12\\.nuget\\packages\\": {},
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Library.API.csproj",
       "projectName": "Library.API",
       "projectPath": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\Library.API.csproj",
       "packagesPath": "C:\\Users\\Omer\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.API\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.API\\Library.API.csproj",
+      "projectName": "Library.API",
+      "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.API\\Library.API.csproj",
+      "packagesPath": "C:\\Users\\volunteer12\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.API\\obj\\",
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Omer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\volunteer12\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6148,12 +6164,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+        "C:\\Program Files\\dotnet\\library-packs": {},
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Library.BLL.csproj": {
               "projectPath": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.BLL\\Library.BLL.csproj"
             },
@@ -6165,6 +6186,19 @@
             },
             "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.Entities\\Library.Entities.csproj": {
               "projectPath": "C:\\Users\\Omer\\Desktop\\LibraryProject-main\\Library.Entities\\Library.Entities.csproj"
+=======
+            "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.BLL\\Library.BLL.csproj": {
+              "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.BLL\\Library.BLL.csproj"
+            },
+            "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DAL\\Library.DAL.csproj": {
+              "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DAL\\Library.DAL.csproj"
+            },
+            "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\Library.DBO.csproj": {
+              "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.DBO\\Library.DBO.csproj"
+            },
+            "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj": {
+              "projectPath": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject\\Library.Entities\\Library.Entities.csproj"
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
             }
           }
         }
@@ -6178,8 +6212,12 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
+<<<<<<< HEAD
       },
       "SdkAnalysisLevel": "9.0.300"
+=======
+      }
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
     },
     "frameworks": {
       "net8.0": {
@@ -6243,7 +6281,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
       }
     }
   }

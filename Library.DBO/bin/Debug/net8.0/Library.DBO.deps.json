@@ -968,7 +968,11 @@
         },
         "runtime": {
           "Library.Entities.dll": {
+<<<<<<< HEAD
             "assemblyVersion": "1.0.0.0",
+=======
+            "assemblyVersion": "1.0.0",
+>>>>>>> df8759a624d03709649affb3bdaa6dd42546dee2
             "fileVersion": "1.0.0.0"
           }
         }
