@@ -1005,3 +1005,4 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\obj
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\obj\Debug\net8.0\Library.API.pdb
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\obj\Debug\net8.0\Library.API.genruntimeconfig.cache
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\obj\Debug\net8.0\ref\Library.API.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\obj\Debug\net8.0\Library.API.sourcelink.json

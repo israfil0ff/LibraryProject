@@ -75,5 +75,12 @@ namespace Library.API.Controllers
                 return NotFound(ex.Message);
             }
         }
+        [HttpGet("with-books")]
+        public IActionResult GetAllWithBooks()
+        {
+            
+            var result = _service.GetAllWithBooks();
+            return Ok(result);
+        }
     }
 }

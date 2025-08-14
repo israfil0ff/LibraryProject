@@ -34,7 +34,8 @@ namespace Library.BLL
         public CategoryDto GetById(int id)
         {
             var category = _context.Categories
-                .FirstOrDefault(c => c.Id == id && !c.IsDeleted);
+        .Include(c => c.Books) 
+        .FirstOrDefault(c => c.Id == id && !c.IsDeleted);
 
             if (category == null)
                 return null;
@@ -69,8 +70,26 @@ namespace Library.BLL
             category.Name = dto.Name;
             _context.SaveChanges();
         }
+        public ApiResponse<List<CategoryWithBooksDto>> GetAllWithBooks()
+        {
+            try
+            {
+                var categories = _context.Categories
+                    .Where(c => !c.IsDeleted)
+                    .Include(c => c.Books)
+                    .ToList();
 
-        
+                var data = _mapper.Map<List<CategoryWithBooksDto>>(categories);
+                return ApiResponse<List<CategoryWithBooksDto>>
+                    .SuccessResponse("Kateqoriyalar (+kitablar) siyahısı", data);
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<CategoryWithBooksDto>>
+                    .FailResponse("Xəta baş verdi: " + ex.Message);
+            }
+        }
+
         public void Delete(int id)
         {
             

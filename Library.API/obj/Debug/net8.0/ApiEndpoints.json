@@ -269,6 +269,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Library.API.Controllers.CategoriesController",
+    "Method": "GetAllWithBooks",
+    "RelativePath": "api/Categories/with-books",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "UserController",
     "Method": "Login",
     "RelativePath": "api/User/login",

@@ -61,7 +61,9 @@ builder.Services.AddDbContext<LibraryDbContext>(options =>
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IBookRentalService, BookRentalService>();
-builder.Services.AddScoped<ICategoryService, CategoryService>(); // Yeni Category Service
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+
 
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
