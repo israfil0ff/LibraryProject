@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public class AuthorDto
+public class AuthorGetDTO
 {
     public int Id { get; set; }
     public string Name { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Entities
 {
-    public class User
+    public class User : AuditableEntity
     {
         public int Id { get; set; }
         public string Nick { get; set; }

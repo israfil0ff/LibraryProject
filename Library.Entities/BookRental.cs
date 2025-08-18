@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.Entities
 {
-    public class BookRental
+    public class BookRental : AuditableEntity
     {
         public int Id { get; set; }
         public int BookId { get; set; }

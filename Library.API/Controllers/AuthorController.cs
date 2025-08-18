@@ -37,23 +37,28 @@ public class AuthorController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Add([FromBody] DBO.AuthorCreateDto authorDto)
+    public IActionResult Add([FromBody] AuthorCreateDto authorDto)
     {
-        _service.Add(authorDto);
-        return Ok();
+        var id = _service.Add(authorDto);
+        return Ok(new { Id = id }); 
     }
 
     [HttpPut]
     public IActionResult Update([FromBody] AuthorUpdateDto authorDto)
     {
-        _service.Update(authorDto);
-        return Ok();
+        var id = _service.Update(authorDto);
+        if (id == 0) return NotFound(new { Message = "Author not found" });
+
+        return Ok(new { Id = id }); 
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
-        _service.Delete(id);
-        return Ok();
+        var success = _service.Delete(id);
+        if (!success) return NotFound(new { Message = "Author not found" });
+
+        return Ok(new { Success = success }); 
     }
+
 }

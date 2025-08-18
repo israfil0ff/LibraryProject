@@ -20,30 +20,27 @@ namespace Library.BLL
             _mapper = mapper;
         }
 
-        
-        public List<BookDto> GetAll()
+        public List<BookGetDTO> GetAll()
         {
             var books = _context.Books
                 .Include(b => b.Author)
                 .Include(b => b.Category)
                 .ToList();
 
-            return _mapper.Map<List<BookDto>>(books);
+            return _mapper.Map<List<BookGetDTO>>(books);
         }
 
-       
-        public BookDto GetById(int id)
+        public BookGetDTO GetById(int id)
         {
             var book = _context.Books
                 .Include(b => b.Author)
                 .Include(b => b.Category)
                 .FirstOrDefault(b => b.Id == id);
 
-            return _mapper.Map<BookDto>(book);
+            return _mapper.Map<BookGetDTO>(book);
         }
 
-       
-        public void Add(BookCreateDto bookDto)
+        public int Add(BookCreateDto bookDto)
         {
             if (bookDto.CategoryId != null && !_context.Categories.Any(c => c.Id == bookDto.CategoryId && !c.IsDeleted))
                 throw new Exception("Category tapılmadı.");
@@ -51,10 +48,11 @@ namespace Library.BLL
             var book = _mapper.Map<Book>(bookDto);
             _context.Books.Add(book);
             _context.SaveChanges();
+
+            return book.Id; 
         }
 
-        
-        public void Update(BookUpdateDto bookDto)
+        public int Update(BookUpdateDto bookDto)
         {
             var book = _context.Books.FirstOrDefault(b => b.Id == bookDto.Id);
             if (book == null) throw new Exception("Book tapılmadı.");
@@ -64,19 +62,21 @@ namespace Library.BLL
 
             _mapper.Map(bookDto, book);
             _context.SaveChanges();
+
+            return book.Id; 
         }
 
-        
-        public void Delete(int id)
+        public bool Delete(int id)
         {
             var book = _context.Books.FirstOrDefault(b => b.Id == id);
-            if (book == null) return;
+            if (book == null) return false;
 
             _context.Books.Remove(book);
             _context.SaveChanges();
+
+            return true; 
         }
 
-        
         public bool AddCount(int bookId, int count)
         {
             var book = _context.Books.FirstOrDefault(b => b.Id == bookId);

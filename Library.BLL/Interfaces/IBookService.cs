@@ -10,11 +10,11 @@ namespace Library.BLL;
 public interface IBookService
 {
 
-    List<BookDto> GetAll();
-    BookDto GetById(int id);
-    void Add(BookCreateDto bookDto);
-    void Update(BookUpdateDto bookDto);
-    void Delete(int id);
+    List<BookGetDTO> GetAll();
+    BookGetDTO GetById(int id);
+    int Add(BookCreateDto bookDto);       
+    int Update(BookUpdateDto bookDto);    
+    bool Delete(int id);
     bool AddCount(int bookId, int count);
     
 

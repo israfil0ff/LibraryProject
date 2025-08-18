@@ -36,22 +36,24 @@ public class BookController : ControllerBase
     [HttpPost]
     public IActionResult Add(BookCreateDto bookDto)
     {
-        _service.Add(bookDto);
-        return Ok();
+        var id = _service.Add(bookDto);
+        return Ok(new { Id = id });
     }
 
     [HttpPut]
     public IActionResult Update(BookUpdateDto bookDto)
     {
-        _service.Update(bookDto);
-        return Ok();
+        var id = _service.Update(bookDto);
+        if (id == 0) return NotFound();
+        return Ok(new { Id = id });
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
-        _service.Delete(id);
-        return Ok();
+        var result = _service.Delete(id);
+        if (!result) return NotFound();
+        return Ok(new { Success = result });
     }
     [HttpPost("add-count")]
     public IActionResult AddBookCount([FromBody] AddBookCountDto request)

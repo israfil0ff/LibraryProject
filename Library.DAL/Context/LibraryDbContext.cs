@@ -1,6 +1,7 @@
 ﻿using Library.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
+using System;
+using System.Linq;
 
 namespace Library.DAL.Context
 {
@@ -18,14 +19,67 @@ namespace Library.DAL.Context
         public DbSet<ApiLog> ApiLogs { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        public override int SaveChanges()
+        {
+            var entries = ChangeTracker
+                .Entries()
+                .Where(e => e.Entity is AuditableEntity &&
+                            (e.State == EntityState.Added ||
+                             e.State == EntityState.Modified ||
+                             e.State == EntityState.Deleted));
+
+            foreach (var entry in entries)
+            {
+                var entity = (AuditableEntity)entry.Entity;
+
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entity.CreatedAt = DateTime.UtcNow;
+                        entity.IsDeleted = false;
+                        break;
+
+                    case EntityState.Modified:
+                        entity.ModifiedAt = DateTime.UtcNow;
+                        break;
+
+                    case EntityState.Deleted:
+                        entry.State = EntityState.Modified; 
+                        entity.IsDeleted = true;
+                        entity.DeletedAt = DateTime.UtcNow;
+                        break;
+                }
+            }
+
+            return base.SaveChanges();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            
             modelBuilder.Entity<BookRental>()
                 .Property(b => b.Price)
                 .HasColumnType("decimal(18,2)");
+
+            
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                if (typeof(AuditableEntity).IsAssignableFrom(entityType.ClrType))
+                {
+                    var method = typeof(LibraryDbContext)
+                        .GetMethod(nameof(SetGlobalQueryFilter), System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)
+                        ?.MakeGenericMethod(entityType.ClrType);
+
+                    method?.Invoke(null, new object[] { modelBuilder });
+                }
+            }
+        }
+
+        private static void SetGlobalQueryFilter<TEntity>(ModelBuilder modelBuilder) where TEntity : AuditableEntity
+        {
+            modelBuilder.Entity<TEntity>().HasQueryFilter(e => !e.IsDeleted);
         }
     }
 }

@@ -10,10 +10,10 @@ using Library.Entities;
 namespace Library.BLL;
 public interface IAuthorService
 {
-    List<AuthorDto> GetAll();
-    AuthorDto? GetById(int id);
-    void Add(DBO.AuthorCreateDto authorDto);
-    void Update(AuthorUpdateDto authorDto);
-    void Delete(int id);
+    List<AuthorGetDTO> GetAll();
+    AuthorGetDTO? GetById(int id);
+    int Add(DBO.AuthorCreateDto authorDto);
+    int Update(AuthorUpdateDto authorDto);
+    bool Delete(int id);
 
 }

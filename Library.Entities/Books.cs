@@ -1,7 +1,7 @@
 ﻿using Library.Entities;
 using System.Text.Json.Serialization;
 
-public class Book
+public class Book : AuditableEntity
 {
     public int Id { get; set; }
     public string Title { get; set; } = null!;

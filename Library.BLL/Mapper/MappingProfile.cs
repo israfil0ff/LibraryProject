@@ -27,13 +27,13 @@ namespace Library.BLL
                         .Select(b => b)             
                     ));
 
-            CreateMap<Author, AuthorDto>()
+            CreateMap<Author, AuthorGetDTO>()
         .ForMember(dest => dest.BookTitles, opt => opt.MapFrom(src => src.Books.Select(b => b.Title)));
 
             CreateMap<AuthorCreateDto, Author>();
             CreateMap<AuthorUpdateDto, Author>();
 
-            CreateMap<Book, BookDto>()
+            CreateMap<Book, BookGetDTO>()
     .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category != null ? src.Category.Name : null));
 
 
