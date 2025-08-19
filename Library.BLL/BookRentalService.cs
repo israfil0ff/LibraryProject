@@ -39,40 +39,21 @@ namespace Library.BLL
             }
         }
 
+        
         public ApiResponse<BookRentalDto> RentBook(BookRentalCreateDto createDto)
         {
             try
             {
-                bool alreadyRented = _context.BookRentals.Any(r =>
-                    r.BookId == createDto.BookId &&
-                    r.UserId == createDto.UserId &&
-                    r.ReturnDate == null
-                );
-
-                if (alreadyRented)
-                    return ApiResponse<BookRentalDto>.FailResponse("Bu kitab artıq sizə icarəyə verilib və hələ qaytarılmayıb.");
-
-                var user = _context.Users
-                    .FirstOrDefault(u => u.Nick == createDto.Nick && u.Password == createDto.Password);
-
+                var user = _context.Users.FirstOrDefault(u => u.Nick == createDto.Nick && u.Password == createDto.Password);
                 if (user == null)
                     return ApiResponse<BookRentalDto>.FailResponse("Yanlış nick və ya şifrə. İcarə mümkün deyil.");
 
                 var book = _context.Books.FirstOrDefault(b => b.Id == createDto.BookId);
-
                 if (book == null)
-                    return ApiResponse<BookRentalDto>.FailResponse($"Book with Id {createDto.BookId} not found.");
+                    return ApiResponse<BookRentalDto>.FailResponse("Kitab tapılmadı.");
 
                 if (book.AvailableCount <= 0)
                     return ApiResponse<BookRentalDto>.FailResponse("Kitab mövcud deyil.");
-
-                bool hasActiveRental = _context.BookRentals.Any(r =>
-                    r.BookId == createDto.BookId &&
-                    r.UserId == user.Id &&
-                    r.ReturnDate == null);
-
-                if (hasActiveRental)
-                    return ApiResponse<BookRentalDto>.FailResponse("Eyni kitabı artıq aktiv olaraq icarəyə almısınız.");
 
                 bool hasOverdueRental = _context.BookRentals.Any(r =>
                     r.UserId == user.Id &&
@@ -84,36 +65,50 @@ namespace Library.BLL
 
                 var newRental = new BookRental
                 {
-                    BookId = createDto.BookId,
+                    BookId = book.Id,
+                    UserId = user.Id,
                     RentalType = createDto.RentalType,
-                    StartDate = DateTime.Now,
-                    UserId = user.Id
+                    StartDate = DateTime.Now
                 };
 
+                decimal pricePerUnit = 0;
+                string durationText = "";
+
+                
                 switch (newRental.RentalType)
                 {
                     case RentalType.Daily:
-                        newRental.EndDate = newRental.StartDate.AddDays(1);
-                        newRental.Price = 2;
+                        newRental.EndDate = newRental.StartDate.AddDays(createDto.Quantity);
+                        pricePerUnit = 2;
+                        durationText = $"{createDto.Quantity} gün";
                         break;
                     case RentalType.Weekly:
-                        newRental.EndDate = newRental.StartDate.AddDays(7);
-                        newRental.Price = 13;
+                        newRental.EndDate = newRental.StartDate.AddDays(7 * createDto.Quantity);
+                        pricePerUnit = 13;
+                        durationText = $"{createDto.Quantity} həftə";
                         break;
                     case RentalType.Monthly:
-                        newRental.EndDate = newRental.StartDate.AddMonths(1);
-                        newRental.Price = 55;
+                        newRental.EndDate = newRental.StartDate.AddMonths(createDto.Quantity);
+                        pricePerUnit = 55;
+                        durationText = $"{createDto.Quantity} ay";
                         break;
                     default:
-                        return ApiResponse<BookRentalDto>.FailResponse("Invalid rental type");
+                        return ApiResponse<BookRentalDto>.FailResponse("Yanlış kirayə tipi");
                 }
 
+                newRental.Price = pricePerUnit * createDto.Quantity;
+
+                
                 book.AvailableCount--;
+                book.RentedCount++;
 
                 _context.BookRentals.Add(newRental);
                 _context.SaveChanges();
 
+                
                 var dto = _mapper.Map<BookRentalDto>(newRental);
+                dto.DurationText = durationText;
+
                 return ApiResponse<BookRentalDto>.SuccessResponse("Kitab uğurla icarəyə verildi.", dto);
             }
             catch (Exception ex)
@@ -121,9 +116,45 @@ namespace Library.BLL
                 return ApiResponse<BookRentalDto>.FailResponse("Xəta baş verdi: " + ex.Message);
             }
         }
+
+        
+        public ApiResponse<string> ReturnBook(BookReturnDto dto)
+        {
+            try
+            {
+                var user = _context.Users.FirstOrDefault(u => u.Nick == dto.Nick && u.Password == dto.Password);
+                if (user == null)
+                    return ApiResponse<string>.SuccessResponse("Yanlış nick və ya şifrə.");
+
+                var rental = _context.BookRentals
+                    .Include(r => r.Book)
+                    .FirstOrDefault(r => r.Id == dto.RentalId && r.UserId == user.Id);
+
+                if (rental == null)
+                    return ApiResponse<string>.SuccessResponse("Rental tapılmadı və ya bu istifadəçiyə aid deyil.");
+
+                if (DateTime.Now < rental.EndDate)
+                    return ApiResponse<string>.SuccessResponse("Kirayə müddəti hələ bitməyib, qaytarmaq mümkün deyil.");
+
+                if (rental.ReturnDate != null)
+                    return ApiResponse<string>.SuccessResponse("Kitab artıq qaytarılıb.");
+
+                rental.ReturnDate = DateTime.Now;
+                rental.Book.AvailableCount++;
+                rental.Book.RentedCount--;
+
+                _context.SaveChanges();
+
+                return ApiResponse<string>.SuccessResponse("Kitab uğurla qaytarıldı.");
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<string>.FailResponse("Xəta baş verdi: " + ex.Message);
+            }
+        }
     }
 
-    // Standart cavab modeli
+    
     public class ApiResponse<T>
     {
         public bool Success { get; set; }

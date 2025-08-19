@@ -15,40 +15,38 @@ namespace Library.API.Controllers
             _service = service;
         }
 
-        private IActionResult ApiResponse(bool success, string message, object? data = null)
+        private IActionResult ApiResponse<T>(ApiResponse<T> response)
         {
             return Ok(new
             {
-                Success = success,
-                Message = message,
-                Data = data
+                Success = response.Success,
+                Message = response.Message,
+                Data = response.Data
             });
         }
 
+        
         [HttpGet]
         public IActionResult GetAll()
         {
             var rentals = _service.GetAll();
-            return ApiResponse(true, "Kitab icarələri siyahısı", rentals);
+            return ApiResponse(rentals);
         }
 
-        [HttpPost]
+        
+        [HttpPost("rent")]
         public IActionResult RentBook([FromBody] BookRentalCreateDto createDto)
         {
-            try
-            {
-                var result = _service.RentBook(createDto);
+            var result = _service.RentBook(createDto);
+            return ApiResponse(result);
+        }
 
-                if (result == null)
-                    return ApiResponse(false, "İcarə yaradıla bilmədi.");
-
-                return ApiResponse(true, "Kitab uğurla icarəyə verildi.", result);
-            }
-            catch (Exception ex)
-            {
-               
-                return ApiResponse(false, "Xəta baş verdi: " + ex.Message);
-            }
+        
+        [HttpPost("return")]
+        public IActionResult ReturnBook([FromBody] BookReturnDto dto)
+        {
+            var result = _service.ReturnBook(dto);
+            return ApiResponse(result);
         }
     }
 }

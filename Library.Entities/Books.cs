@@ -11,6 +11,8 @@ public class Book : AuditableEntity
     public int AuthorId { get; set; }
 
     public int AvailableCount { get; set; }
+    public int RentedCount { get; set; } = 0; 
+
     public int? CategoryId { get; set; }  
     public virtual Category Category { get; set; }
 

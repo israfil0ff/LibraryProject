@@ -12,6 +12,7 @@ namespace Library.DBO
 
         [Required]
         public RentalType RentalType { get; set; }
+        public int Quantity { get; set; } = 1;
         public string Nick { get; set; }
         public string Password { get; set; }
     }

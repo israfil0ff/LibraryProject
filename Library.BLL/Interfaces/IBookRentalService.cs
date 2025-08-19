@@ -1,9 +1,6 @@
 ﻿using Library.DBO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.BLL
 {
@@ -11,5 +8,6 @@ namespace Library.BLL
     {
         ApiResponse<List<BookRentalDto>> GetAll();
         ApiResponse<BookRentalDto> RentBook(BookRentalCreateDto createDto);
+        ApiResponse<string> ReturnBook(BookReturnDto dto); 
     }
 }

@@ -15,5 +15,7 @@ namespace Library.DBO
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public decimal Price { get; set; }
+        public string DurationText { get; set; } = null!;
+        public DateTime? ReturnDate { get; set; }
     }
 }

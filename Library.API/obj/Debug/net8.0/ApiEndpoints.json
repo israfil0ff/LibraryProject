@@ -176,7 +176,7 @@
   {
     "ContainingType": "Library.API.Controllers.BookRentalController",
     "Method": "RentBook",
-    "RelativePath": "api/BookRental",
+    "RelativePath": "api/BookRental/rent",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -184,6 +184,22 @@
       {
         "Name": "createDto",
         "Type": "Library.DBO.BookRentalCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library.API.Controllers.BookRentalController",
+    "Method": "ReturnBook",
+    "RelativePath": "api/BookRental/return",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Library.DBO.BookReturnDto",
         "IsRequired": true
       }
     ],

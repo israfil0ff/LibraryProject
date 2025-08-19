@@ -23,3 +23,4 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.Entitie
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.Entities\obj\Debug\net8.0\refint\Library.Entities.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.Entities\obj\Debug\net8.0\Library.Entities.pdb
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.Entities\obj\Debug\net8.0\ref\Library.Entities.dll
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.Entities\obj\Debug\net8.0\Library.Entities.sourcelink.json
