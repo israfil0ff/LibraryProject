@@ -32,9 +32,9 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfoInputs.cache
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfo.cs
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library.BLL.sourcelink.json
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library..6B42F545.Up2Date
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library.BLL.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\refint\Library.BLL.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library.BLL.pdb
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll
-C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.BLL\obj\Debug\net8.0\Library.BLL.sourcelink.json

@@ -24,9 +24,9 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library.DBO.AssemblyInfoInputs.cache
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library.DBO.AssemblyInfo.cs
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library.DBO.csproj.CoreCompileInputs.cache
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library.DBO.sourcelink.json
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library..E209ACFE.Up2Date
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library.DBO.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\refint\Library.DBO.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library.DBO.pdb
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\ref\Library.DBO.dll
-C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.DBO\obj\Debug\net8.0\Library.DBO.sourcelink.json
