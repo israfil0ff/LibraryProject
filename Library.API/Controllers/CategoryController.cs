@@ -1,11 +1,13 @@
 ﻿using Library.BLL.Interfaces;
 using Library.DBO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace Library.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableRateLimiting("fixed")]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _service;

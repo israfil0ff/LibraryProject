@@ -10,6 +10,7 @@ using Serilog.Sinks.MSSqlServer;
 using System.Collections.ObjectModel;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
 
 AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
 {
@@ -72,14 +73,29 @@ builder.Services.AddProblemDetails();
 // Rate Limiting
 builder.Services.AddRateLimiter(options =>
 {
+   
     options.AddFixedWindowLimiter("fixed", opt =>
     {
-        opt.PermitLimit = 10;               
-        opt.Window = TimeSpan.FromSeconds(30); 
-        opt.QueueLimit = 0;                  
+        opt.PermitLimit = 10;
+        opt.Window = TimeSpan.FromSeconds(30);
+        opt.QueueLimit = 0;
     });
 
-    
+  
+    options.AddPolicy("per-token", httpContext =>
+    {
+        var key = GetTokenOrIp(httpContext);
+        return RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: key,
+            factory: _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 5,
+                Window = TimeSpan.FromMinutes(5),
+                QueueLimit = 0,
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst
+            });
+    });
+
     options.OnRejected = async (context, token) =>
     {
         context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
@@ -87,6 +103,20 @@ builder.Services.AddRateLimiter(options =>
             "Too many requests. Please try again later.", token);
     };
 });
+
+
+static string GetTokenOrIp(HttpContext ctx)
+{
+    if (ctx.Request.Headers.TryGetValue("Authorization", out var auth) &&
+        auth.ToString().StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+    {
+        var token = auth.ToString().Substring("Bearer ".Length).Trim();
+        if (!string.IsNullOrWhiteSpace(token))
+            return "t:" + token;
+    }
+
+    return "ip:" + (ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown");
+}
 
 var app = builder.Build();
 
@@ -100,16 +130,23 @@ if (app.Environment.IsDevelopment())
 app.UseExceptionHandler();
 app.UseHttpsRedirection();
 
-
 app.UseRateLimiter();
 
-// Custom Middlewares
+
 app.UseMiddleware<SimpleRequestLoggingMiddleware>();
 app.UseMiddleware<Library.API.Middlewares.CustomOkErrorMiddleware>();
 
 app.UseAuthorization();
 
 
-app.MapControllers().RequireRateLimiting("fixed");
+app.MapControllerRoute(
+    name: "author",
+    pattern: "api/author/{action=Get}/{id?}",
+    defaults: new { controller = "Author" }
+).RequireRateLimiting("per-token");
+
+
+app.MapControllers();
+
 
 app.Run();

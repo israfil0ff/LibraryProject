@@ -2,10 +2,12 @@
 using Library.DBO;
 using Library.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using System.Linq;
 
 [ApiController]
 [Route("api/[controller]")]
+[EnableRateLimiting("fixed")]
 public class UserController : ControllerBase
 {
     private readonly LibraryDbContext _context;

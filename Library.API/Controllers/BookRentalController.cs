@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Library.BLL;
 using Library.DBO;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace Library.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableRateLimiting("fixed")]
     public class BookRentalController : ControllerBase
     {
         private readonly IBookRentalService _service;

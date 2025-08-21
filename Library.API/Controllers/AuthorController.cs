@@ -2,11 +2,13 @@ using Library.BLL;
 using Library.DBO;
 using Library.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace Library.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[EnableRateLimiting("per-token")]
 public class AuthorController : ControllerBase
 {
     private readonly IAuthorService _service;
