@@ -12,13 +12,14 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
 
+// 🔹 Global unhandled exception logger
 AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
 {
     Console.WriteLine("UNHANDLED EXCEPTION:");
     Console.WriteLine(e.ExceptionObject.ToString());
 };
 
-// Serilog SQL Column Options
+// 🔹 Serilog SQL Column Options
 var columnOptions = new ColumnOptions
 {
     AdditionalColumns = new Collection<SqlColumn>
@@ -27,10 +28,9 @@ var columnOptions = new ColumnOptions
     }
 };
 
-// Serilog konfiqurasiyası
+// 🔹 Serilog configuration
 Log.Logger = new LoggerConfiguration()
-    .Filter.ByIncludingOnly(Matching.WithProperty<string>(
-        "SourceContext", sc => sc == "SimpleRequestLoggingMiddleware"))
+    .Filter.ByIncludingOnly(Matching.WithProperty<string>("SourceContext", sc => sc == "SimpleRequestLoggingMiddleware"))
     .WriteTo.MSSqlServer(
         connectionString: "Server=ITMVOL112;Database=LibraryDb;Trusted_Connection=True;TrustServerCertificate=True;",
         sinkOptions: new MSSqlServerSinkOptions { TableName = "Logs", AutoCreateSqlTable = true },
@@ -41,70 +41,110 @@ Log.Logger = new LoggerConfiguration()
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
 
-// Controllers + FluentValidation
-builder.Services.AddControllers()
-    .AddJsonOptions(x =>
-    {
-        x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-    })
-    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AuthorCreateDto>());
+// 🔹 Services registration
+ConfigureServices(builder.Services, builder.Configuration);
 
-// Swagger
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+var app = builder.Build();
 
-// AutoMapper
-builder.Services.AddAutoMapper(typeof(MappingProfile));
+// 🔹 Middleware pipeline
+ConfigureMiddleware(app);
 
-// DbContext
-builder.Services.AddDbContext<LibraryDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+app.Run();
 
-// Services
-builder.Services.AddScoped<IAuthorService, AuthorService>();
-builder.Services.AddScoped<IBookService, BookService>();
-builder.Services.AddScoped<IBookRentalService, BookRentalService>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-
-// Exception handling
-builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-builder.Services.AddProblemDetails();
-
-// Rate Limiting
-builder.Services.AddRateLimiter(options =>
+// ==========================
+// 🔽 Helpers (Extension Style)
+// ==========================
+static void ConfigureServices(IServiceCollection services, IConfiguration config)
 {
-   
-    options.AddFixedWindowLimiter("fixed", opt =>
+    // Controllers + FluentValidation
+    services.AddControllers()
+        .AddJsonOptions(opt => opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles)
+        .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AuthorCreateDto>());
+
+    // Swagger
+    services.AddEndpointsApiExplorer();
+    services.AddSwaggerGen();
+
+    // AutoMapper
+    services.AddAutoMapper(typeof(MappingProfile));
+
+    // DbContext
+    services.AddDbContext<LibraryDbContext>(options =>
+        options.UseSqlServer(config.GetConnectionString("DefaultConnection")));
+
+    // Services
+    services.AddScoped<IAuthorService, AuthorService>();
+    services.AddScoped<IBookService, BookService>();
+    services.AddScoped<IBookRentalService, BookRentalService>();
+    services.AddScoped<ICategoryService, CategoryService>();
+
+    // ProblemDetails
+    services.AddProblemDetails();
+
+    // Rate Limiting
+    services.AddRateLimiter(options =>
     {
-        opt.PermitLimit = 10;
-        opt.Window = TimeSpan.FromSeconds(30);
-        opt.QueueLimit = 0;
+        options.AddFixedWindowLimiter("fixed", opt =>
+        {
+            opt.PermitLimit = 10;
+            opt.Window = TimeSpan.FromSeconds(30);
+            opt.QueueLimit = 0;
+        });
+
+        options.AddPolicy("per-token", httpContext =>
+        {
+            var key = GetTokenOrIp(httpContext);
+            return RateLimitPartition.GetFixedWindowLimiter(
+                partitionKey: key,
+                factory: _ => new FixedWindowRateLimiterOptions
+                {
+                    PermitLimit = 5,
+                    Window = TimeSpan.FromMinutes(5),
+                    QueueLimit = 0,
+                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst
+                });
+        });
+
+        options.OnRejected = async (context, token) =>
+        {
+            context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
+            await context.HttpContext.Response.WriteAsync(
+                "Too many requests. Please try again later.", token);
+        };
     });
+}
 
-  
-    options.AddPolicy("per-token", httpContext =>
+static void ConfigureMiddleware(WebApplication app)
+{
+    if (app.Environment.IsDevelopment())
     {
-        var key = GetTokenOrIp(httpContext);
-        return RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: key,
-            factory: _ => new FixedWindowRateLimiterOptions
-            {
-                PermitLimit = 5,
-                Window = TimeSpan.FromMinutes(5),
-                QueueLimit = 0,
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst
-            });
-    });
+        app.UseDeveloperExceptionPage();
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
 
-    options.OnRejected = async (context, token) =>
-    {
-        context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
-        await context.HttpContext.Response.WriteAsync(
-            "Too many requests. Please try again later.", token);
-    };
-});
+    // 🔹 Global Exception Middleware
+    app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
+    app.UseHttpsRedirection();
+    app.UseRateLimiter();
 
+    app.UseMiddleware<SimpleRequestLoggingMiddleware>();
+    app.UseMiddleware<Library.API.Middlewares.CustomOkErrorMiddleware>();
+
+    app.UseAuthorization();
+
+    // Custom Author Route
+    app.MapControllerRoute(
+        name: "author",
+        pattern: "api/author/{action=Get}/{id?}",
+        defaults: new { controller = "Author" }
+    ).RequireRateLimiting("per-token");
+
+    app.MapControllers();
+}
+
+// 🔹 Token və ya IP helper
 static string GetTokenOrIp(HttpContext ctx)
 {
     if (ctx.Request.Headers.TryGetValue("Authorization", out var auth) &&
@@ -117,36 +157,3 @@ static string GetTokenOrIp(HttpContext ctx)
 
     return "ip:" + (ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown");
 }
-
-var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseExceptionHandler();
-app.UseHttpsRedirection();
-
-app.UseRateLimiter();
-
-
-app.UseMiddleware<SimpleRequestLoggingMiddleware>();
-app.UseMiddleware<Library.API.Middlewares.CustomOkErrorMiddleware>();
-
-app.UseAuthorization();
-
-
-app.MapControllerRoute(
-    name: "author",
-    pattern: "api/author/{action=Get}/{id?}",
-    defaults: new { controller = "Author" }
-).RequireRateLimiting("per-token");
-
-
-app.MapControllers();
-
-
-app.Run();

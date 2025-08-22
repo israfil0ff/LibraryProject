@@ -19,57 +19,53 @@ public class BookController : ControllerBase
 
     [HttpGet]
     public IActionResult GetAll()
-    {
-        var books = _service.GetAll();
-        return Ok(books);
-    }
+        => Ok(ApiResponse.SuccessResponse(_service.GetAll()));
 
     [HttpGet("{id}")]
     public IActionResult GetById(int id)
     {
         var book = _service.GetById(id);
-        if (book == null)
-        {
-            return Ok(new { Message = $"Id={id} üçün məlumat tapılmadı." });
-        }
-        return Ok(book);
+        return book == null
+            ? NotFound(ApiResponse.FailResponse($"Id={id} üçün məlumat tapılmadı."))
+            : Ok(ApiResponse.SuccessResponse(book));
     }
 
     [HttpPost]
     public IActionResult Add(BookCreateDto bookDto)
     {
         var id = _service.Add(bookDto);
-        return Ok(new { Id = id });
+        return Ok(ApiResponse.SuccessResponse(new { Id = id }, "Book created successfully"));
     }
 
     [HttpPut]
     public IActionResult Update(BookUpdateDto bookDto)
     {
         var id = _service.Update(bookDto);
-        if (id == 0) return NotFound();
-        return Ok(new { Id = id });
+        return id == 0
+            ? NotFound(ApiResponse.FailResponse("Book not found"))
+            : Ok(ApiResponse.SuccessResponse(new { Id = id }, "Book updated successfully"));
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
         var result = _service.Delete(id);
-        if (!result) return NotFound();
-        return Ok(new { Success = result });
+        return !result
+            ? NotFound(ApiResponse.FailResponse("Book not found"))
+            : Ok(ApiResponse.SuccessResponse(result, "Book deleted successfully"));
     }
+
     [HttpPost("add-count")]
     public IActionResult AddBookCount([FromBody] AddBookCountDto request)
     {
         if (request.Nick != "admin" || request.Password != "admin")
         {
-            return Ok(new { message = "Yanlış nick və ya password, count əlavə olunmadı." });
+            return BadRequest(ApiResponse.FailResponse("Yanlış nick və ya password, count əlavə olunmadı."));
         }
 
         var success = _service.AddCount(request.BookId, request.Count);
-        if (!success)
-            return NotFound(new { message = "Kitab tapılmadı." });
-
-        return Ok(new { message = "Count əlavə olundu." });
+        return !success
+            ? NotFound(ApiResponse.FailResponse("Kitab tapılmadı."))
+            : Ok(ApiResponse.SuccessResponse(null, "Count əlavə olundu."));
     }
-
 }

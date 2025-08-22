@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using Library.DAL.Context;
 using Library.Entities;
 using Library.DBO;
@@ -18,42 +19,35 @@ public class AuthorService : IAuthorService
     }
 
     public List<AuthorGetDTO> GetAll()
-    {
-        var authors = _context.Authors
+        => _context.Authors
             .Include(a => a.Books)
             .Where(a => !a.IsDeleted)
+            .ProjectTo<AuthorGetDTO>(_mapper.ConfigurationProvider)
             .ToList();
 
-        return _mapper.Map<List<AuthorGetDTO>>(authors);
-    }
-
     public AuthorGetDTO? GetById(int id)
-    {
-        var author = _context.Authors
+        => _context.Authors
             .Include(a => a.Books)
-            .FirstOrDefault(a => a.Id == id && !a.IsDeleted);
-
-        return author == null ? null : _mapper.Map<AuthorGetDTO>(author);
-    }
+            .Where(a => a.Id == id && !a.IsDeleted)
+            .ProjectTo<AuthorGetDTO>(_mapper.ConfigurationProvider)
+            .FirstOrDefault();
 
     public int Add(AuthorCreateDto authorDto)
     {
         var author = _mapper.Map<Author>(authorDto);
         _context.Authors.Add(author);
         _context.SaveChanges();
-
-        return author.Id; 
+        return author.Id;
     }
 
     public int Update(AuthorUpdateDto authorDto)
     {
-        var existingAuthor = _context.Authors.FirstOrDefault(a => a.Id == authorDto.Id && !a.IsDeleted);
-        if (existingAuthor == null) return 0;
+        var author = _context.Authors.FirstOrDefault(a => a.Id == authorDto.Id && !a.IsDeleted);
+        if (author == null) return 0;
 
-        _mapper.Map(authorDto, existingAuthor);
+        _mapper.Map(authorDto, author);
         _context.SaveChanges();
-
-        return existingAuthor.Id; 
+        return author.Id;
     }
 
     public bool Delete(int id)
@@ -63,7 +57,6 @@ public class AuthorService : IAuthorService
 
         author.IsDeleted = true;
         _context.SaveChanges();
-
-        return true; 
+        return true;
     }
 }

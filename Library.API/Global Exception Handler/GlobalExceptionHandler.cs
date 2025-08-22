@@ -1,36 +1,46 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-public sealed class GlobalExceptionHandler : IExceptionHandler
-{
-    private readonly ILogger<GlobalExceptionHandler> _logger;
+using System.Net;
+using System.Threading.Tasks;
 
-    public GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger)
+public class GlobalExceptionHandlerMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<GlobalExceptionHandlerMiddleware> _logger;
+
+    public GlobalExceptionHandlerMiddleware(RequestDelegate next, ILogger<GlobalExceptionHandlerMiddleware> logger)
     {
+        _next = next;
         _logger = logger;
     }
 
-    public async ValueTask<bool> TryHandleAsync(
-        HttpContext httpContext,
-        Exception exception,
-        CancellationToken cancellationToken)
+    public async Task InvokeAsync(HttpContext context)
     {
-        _logger.LogError(
-            exception, "Exception occurred: {Message}", exception.Message);
+        try
+        {
+            await _next(context);
+        }
+        catch (Exception ex)
+        {
+            await HandleExceptionAsync(context, ex);
+        }
+    }
+
+    private Task HandleExceptionAsync(HttpContext context, Exception exception)
+    {
+        _logger.LogError(exception, "Unhandled exception: {Message}", exception.Message);
+
+        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+        context.Response.ContentType = "application/json";
 
         var problemDetails = new ProblemDetails
         {
-            Status = StatusCodes.Status500InternalServerError,
+            Status = context.Response.StatusCode,
             Title = "Server error",
             Detail = exception.Message
         };
 
-        httpContext.Response.StatusCode = problemDetails.Status.Value;
-
-        await httpContext.Response
-            .WriteAsJsonAsync(problemDetails, cancellationToken);
-
-        return true;
+        return context.Response.WriteAsJsonAsync(problemDetails);
     }
 }

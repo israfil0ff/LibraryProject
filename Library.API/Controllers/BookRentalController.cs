@@ -17,38 +17,31 @@ namespace Library.API.Controllers
             _service = service;
         }
 
-        private IActionResult ApiResponse<T>(ApiResponse<T> response)
-        {
-            return Ok(new
-            {
-                Success = response.Success,
-                Message = response.Message,
-                Data = response.Data
-            });
-        }
-
-        
         [HttpGet]
         public IActionResult GetAll()
         {
             var rentals = _service.GetAll();
-            return ApiResponse(rentals);
+            return Ok(ApiResponse.SuccessResponse(rentals));
         }
 
-        
         [HttpPost("rent")]
         public IActionResult RentBook([FromBody] BookRentalCreateDto createDto)
         {
             var result = _service.RentBook(createDto);
-            return ApiResponse(result);
+
+            return result.Success
+                ? Ok(ApiResponse.SuccessResponse(result.Data, result.Message ?? "Book rented successfully"))
+                : BadRequest(ApiResponse.FailResponse(result.Message ?? "Failed to rent book"));
         }
 
-        
         [HttpPost("return")]
         public IActionResult ReturnBook([FromBody] BookReturnDto dto)
         {
             var result = _service.ReturnBook(dto);
-            return ApiResponse(result);
+
+            return result.Success
+                ? Ok(ApiResponse.SuccessResponse(result.Data, result.Message ?? "Book returned successfully"))
+                : BadRequest(ApiResponse.FailResponse(result.Message ?? "Failed to return book"));
         }
     }
 }

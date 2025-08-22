@@ -1,6 +1,5 @@
-using Library.BLL;
+﻿using Library.BLL;
 using Library.DBO;
-using Library.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 
@@ -22,45 +21,40 @@ public class AuthorController : ControllerBase
 
     [HttpGet]
     public IActionResult GetAll()
-    {
-        var authors = _service.GetAll();
-        return Ok(authors);
-    }
+    => Ok(ApiResponse.SuccessResponse(_service.GetAll()));
 
     [HttpGet("{id}")]
     public IActionResult Get(int id)
     {
         var author = _service.GetById(id);
-        if (author == null)
-        {
-            return Ok(new { Message = $"Id={id} ���n m?lumat tap?lmad?." });
-        }
-        return Ok(author);
+        return author == null
+            ? NotFound(ApiResponse.FailResponse($"Id={id} üçün məlumat tapılmadı."))
+            : Ok(ApiResponse.SuccessResponse(author));
     }
 
     [HttpPost]
     public IActionResult Add([FromBody] AuthorCreateDto authorDto)
     {
         var id = _service.Add(authorDto);
-        return Ok(new { Id = id }); 
+        return Ok(ApiResponse.SuccessResponse(new { Id = id }, "Author created successfully"));
     }
 
     [HttpPut]
     public IActionResult Update([FromBody] AuthorUpdateDto authorDto)
     {
         var id = _service.Update(authorDto);
-        if (id == 0) return NotFound(new { Message = "Author not found" });
-
-        return Ok(new { Id = id }); 
+        return id == 0
+            ? NotFound(ApiResponse.FailResponse("Author not found"))
+            : Ok(ApiResponse.SuccessResponse(new { Id = id }, "Author updated successfully"));
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
         var success = _service.Delete(id);
-        if (!success) return NotFound(new { Message = "Author not found" });
-
-        return Ok(new { Success = success }); 
+        return !success
+            ? NotFound(ApiResponse.FailResponse("Author not found"))
+            : Ok(ApiResponse.SuccessResponse(success, "Author deleted successfully"));
     }
 
 }

@@ -19,18 +19,15 @@ namespace Library.API.Controllers
 
         [HttpGet]
         public IActionResult GetAll()
-        {
-            return Ok(_service.GetAll());
-        }
+            => Ok(ApiResponse.SuccessResponse(_service.GetAll()));
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
             var category = _service.GetById(id);
-            if (category == null)
-                return NotFound();
-
-            return Ok(category);
+            return category == null
+                ? NotFound(ApiResponse.FailResponse($"Id={id} üçün məlumat tapılmadı."))
+                : Ok(ApiResponse.SuccessResponse(category));
         }
 
         [HttpPost]
@@ -38,12 +35,12 @@ namespace Library.API.Controllers
         {
             try
             {
-                _service.Add(dto);
-                return Ok();
+                var id = _service.Add(dto);
+                return Ok(ApiResponse.SuccessResponse(new { Id = id }, "Category created successfully"));
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ApiResponse.FailResponse(ex.Message));
             }
         }
 
@@ -51,16 +48,16 @@ namespace Library.API.Controllers
         public IActionResult Update(int id, CategoryUpdateDto dto)
         {
             if (id != dto.Id)
-                return BadRequest("ID uyğun gəlmir.");
+                return BadRequest(ApiResponse.FailResponse("ID uyğun gəlmir."));
 
             try
             {
-                _service.Update(dto);
-                return Ok();
+                var updatedId = _service.Update(dto);
+                return Ok(ApiResponse.SuccessResponse(new { Id = updatedId }, "Category updated successfully"));
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ApiResponse.FailResponse(ex.Message));
             }
         }
 
@@ -69,20 +66,22 @@ namespace Library.API.Controllers
         {
             try
             {
-                _service.Delete(id);
-                return Ok();
+                var result = _service.Delete(id);
+                return result
+                    ? Ok(ApiResponse.SuccessResponse(result, "Category deleted successfully"))
+                    : NotFound(ApiResponse.FailResponse("Category not found"));
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ApiResponse.FailResponse(ex.Message));
             }
         }
+
         [HttpGet("with-books")]
         public IActionResult GetAllWithBooks()
         {
-            
             var result = _service.GetAllWithBooks();
-            return Ok(result);
+            return Ok(ApiResponse.SuccessResponse(result));
         }
     }
 }
