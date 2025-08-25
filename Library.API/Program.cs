@@ -78,6 +78,9 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     services.AddScoped<IBookRentalService, BookRentalService>();
     services.AddScoped<ICategoryService, CategoryService>();
 
+    // 🔹 Feedback servisini qeydiyyata al
+    services.AddScoped<IFeedbackService, FeedbackService>();
+
     // ProblemDetails
     services.AddProblemDetails();
 

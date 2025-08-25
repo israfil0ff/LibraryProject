@@ -43,6 +43,8 @@ namespace Library.BLL
 
             CreateMap<BookRental, BookRentalDto>();
             CreateMap<BookRentalDto, BookRental>();
+            CreateMap<FeedbackCreateDto, Feedback>();
+            CreateMap<Feedback, FeedbackGetDto>();
         }
     }
 }
