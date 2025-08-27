@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Library.BLL.Exceptions;
+using Library.Entities.Enums;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Net;
@@ -29,18 +31,26 @@ public class GlobalExceptionHandlerMiddleware
 
     private Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
-        _logger.LogError(exception, "Unhandled exception: {Message}", exception.Message);
-
-        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
         context.Response.ContentType = "application/json";
 
-        var problemDetails = new ProblemDetails
+        if (exception is AppException appEx)
         {
-            Status = context.Response.StatusCode,
-            Title = "Server error",
-            Detail = exception.Message
-        };
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
 
-        return context.Response.WriteAsJsonAsync(problemDetails);
+            return context.Response.WriteAsJsonAsync(new
+            {
+                errorCode = (int)appEx.Code,
+                message = appEx.Message
+            });
+        }
+
+        // Digər xətalar üçün generic
+        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+
+        return context.Response.WriteAsJsonAsync(new
+        {
+            errorCode = 9999,
+            message = "Serverdə gözlənilməz xəta baş verdi."
+        });
     }
 }

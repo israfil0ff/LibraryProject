@@ -9,7 +9,7 @@ namespace Library.BLL.Interfaces
 {
     public interface IFeedbackService
     {
-        void Add(FeedbackCreateDto dto);
-        IEnumerable<FeedbackGetDto> GetAll();
+        void Add(FeedbackCreateDto dto);              
+        IEnumerable<FeedbackGetDto> GetAll();        
     }
 }

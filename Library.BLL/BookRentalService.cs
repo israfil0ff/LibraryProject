@@ -4,6 +4,7 @@ using Library.DAL.Context;
 using Library.DBO;
 using Library.Entities;
 using Library.Entities.Enums;
+using Library.BLL.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Library.BLL;
@@ -19,31 +20,34 @@ public class BookRentalService : IBookRentalService
         _mapper = mapper;
     }
 
-    public ApiResponse<List<BookRentalDto>> GetAll()
+    public List<BookRentalDto> GetAll()
     {
         var rentals = _context.BookRentals
             .Include(r => r.Book)
             .Include(r => r.User)
             .ToList();
 
-        var data = _mapper.Map<List<BookRentalDto>>(rentals);
-        return ApiResponse<List<BookRentalDto>>.SuccessResponse("Kitab icarələri siyahısı", data);
+        return _mapper.Map<List<BookRentalDto>>(rentals);
     }
 
-    public ApiResponse<BookRentalDto> RentBook(BookRentalCreateDto dto)
+    public BookRentalDto RentBook(BookRentalCreateDto dto)
     {
         var user = _context.Users.FirstOrDefault(u => u.Nick == dto.Nick && u.Password == dto.Password);
         if (user == null)
-            return ApiResponse<BookRentalDto>.FailResponse("Yanlış nick və ya şifrə.");
+            throw new AppException(ErrorCode.InvalidCredentials);
 
         var book = _context.Books.FirstOrDefault(b => b.Id == dto.BookId);
-        if (book == null) return ApiResponse<BookRentalDto>.FailResponse("Kitab tapılmadı.");
-        if (book.AvailableCount <= 0) return ApiResponse<BookRentalDto>.FailResponse("Kitab mövcud deyil.");
+        if (book == null)
+            throw new AppException(ErrorCode.BookNotFound);
+
+        if (book.AvailableCount <= 0)
+            throw new AppException(ErrorCode.BookNotAvailable);
 
         bool hasOverdue = _context.BookRentals.Any(r =>
             r.UserId == user.Id && r.ReturnDate == null && r.EndDate < DateTime.Now);
 
-        if (hasOverdue) return ApiResponse<BookRentalDto>.FailResponse("Gecikmiş kitabı qaytarmadan yeni kitab icarə edə bilməzsiniz.");
+        if (hasOverdue)
+            throw new AppException(ErrorCode.HasOverdueRental);
 
         var rental = new BookRental
         {
@@ -53,13 +57,12 @@ public class BookRentalService : IBookRentalService
             StartDate = DateTime.Now
         };
 
-        decimal price = 0;
-        string durationText = dto.Quantity switch
+        string durationText = dto.RentalType switch
         {
-            _ when dto.RentalType == RentalType.Daily => $"{dto.Quantity} gün",
-            _ when dto.RentalType == RentalType.Weekly => $"{dto.Quantity} həftə",
-            _ when dto.RentalType == RentalType.Monthly => $"{dto.Quantity} ay",
-            _ => throw new ArgumentException("Yanlış kirayə tipi")
+            RentalType.Daily => $"{dto.Quantity} gün",
+            RentalType.Weekly => $"{dto.Quantity} həftə",
+            RentalType.Monthly => $"{dto.Quantity} ay",
+            _ => throw new AppException(ErrorCode.InvalidRentalType)
         };
 
         rental.EndDate = dto.RentalType switch
@@ -87,21 +90,27 @@ public class BookRentalService : IBookRentalService
         var rentalDto = _mapper.Map<BookRentalDto>(rental);
         rentalDto.DurationText = durationText;
 
-        return ApiResponse<BookRentalDto>.SuccessResponse("Kitab uğurla icarəyə verildi.", rentalDto);
+        return rentalDto;
     }
 
-    public ApiResponse<string> ReturnBook(BookReturnDto dto)
+    public string ReturnBook(BookReturnDto dto)
     {
         var user = _context.Users.FirstOrDefault(u => u.Nick == dto.Nick && u.Password == dto.Password);
-        if (user == null) return ApiResponse<string>.FailResponse("Yanlış nick və ya şifrə.");
+        if (user == null)
+            throw new AppException(ErrorCode.InvalidCredentials);
 
         var rental = _context.BookRentals
             .Include(r => r.Book)
             .FirstOrDefault(r => r.Id == dto.RentalId && r.UserId == user.Id);
 
-        if (rental == null) return ApiResponse<string>.FailResponse("Rental tapılmadı və ya bu istifadəçiyə aid deyil.");
-        if (rental.ReturnDate != null) return ApiResponse<string>.FailResponse("Kitab artıq qaytarılıb.");
-        if (DateTime.Now < rental.EndDate) return ApiResponse<string>.FailResponse("Kirayə müddəti hələ bitməyib.");
+        if (rental == null)
+            throw new AppException(ErrorCode.RentalNotFound);
+
+        if (rental.ReturnDate != null)
+            throw new AppException(ErrorCode.BookAlreadyReturned);
+
+        if (DateTime.Now < rental.EndDate)
+            throw new AppException(ErrorCode.RentalNotExpired);
 
         rental.ReturnDate = DateTime.Now;
         rental.Book.AvailableCount++;
@@ -109,19 +118,6 @@ public class BookRentalService : IBookRentalService
 
         _context.SaveChanges();
 
-        return ApiResponse<string>.SuccessResponse("Kitab uğurla qaytarıldı.");
+        return "Kitab uğurla qaytarıldı.";
     }
-}
-
-public class ApiResponse<T>
-{
-    public bool Success { get; set; }
-    public string Message { get; set; } = string.Empty;
-    public T? Data { get; set; }
-
-    public static ApiResponse<T> SuccessResponse(string message, T? data = default)
-        => new() { Success = true, Message = message, Data = data };
-
-    public static ApiResponse<T> FailResponse(string message)
-        => new() { Success = false, Message = message };
 }

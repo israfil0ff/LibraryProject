@@ -2,6 +2,8 @@
 using Library.DAL.Context;
 using Library.DBO;
 using Library.Entities;
+using Library.Entities.Enums;
+using Library.BLL.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Library.BLL;
@@ -38,7 +40,7 @@ public class BookService : IBookService
     public int Add(BookCreateDto dto)
     {
         if (dto.CategoryId != null && !_context.Categories.Any(c => c.Id == dto.CategoryId && !c.IsDeleted))
-            throw new Exception("Category tapılmadı.");
+            throw new AppException(ErrorCode.CategoryNotFound);
 
         var book = _mapper.Map<Book>(dto);
         _context.Books.Add(book);
@@ -50,10 +52,10 @@ public class BookService : IBookService
     public int Update(BookUpdateDto dto)
     {
         var book = _context.Books.FirstOrDefault(b => b.Id == dto.Id)
-            ?? throw new Exception("Book tapılmadı.");
+            ?? throw new AppException(ErrorCode.BookNotFound);
 
         if (dto.CategoryId != null && !_context.Categories.Any(c => c.Id == dto.CategoryId && !c.IsDeleted))
-            throw new Exception("Category tapılmadı.");
+            throw new AppException(ErrorCode.CategoryNotFound);
 
         _mapper.Map(dto, book);
         _context.SaveChanges();
@@ -64,7 +66,8 @@ public class BookService : IBookService
     public bool Delete(int id)
     {
         var book = _context.Books.FirstOrDefault(b => b.Id == id);
-        if (book == null) return false;
+        if (book == null)
+            throw new AppException(ErrorCode.BookNotFound);
 
         _context.Books.Remove(book);
         _context.SaveChanges();
@@ -74,8 +77,8 @@ public class BookService : IBookService
 
     public bool AddCount(int bookId, int count)
     {
-        var book = _context.Books.FirstOrDefault(b => b.Id == bookId);
-        if (book == null) return false;
+        var book = _context.Books.FirstOrDefault(b => b.Id == bookId)
+            ?? throw new AppException(ErrorCode.BookNotFound);
 
         book.AvailableCount += count;
         _context.SaveChanges();

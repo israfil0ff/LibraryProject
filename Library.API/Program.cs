@@ -12,14 +12,14 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
 
-// 🔹 Global unhandled exception logger
+//  Global unhandled exception logger
 AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
 {
     Console.WriteLine("UNHANDLED EXCEPTION:");
     Console.WriteLine(e.ExceptionObject.ToString());
 };
 
-// 🔹 Serilog SQL Column Options
+//  Serilog SQL Column Options
 var columnOptions = new ColumnOptions
 {
     AdditionalColumns = new Collection<SqlColumn>
@@ -28,7 +28,7 @@ var columnOptions = new ColumnOptions
     }
 };
 
-// 🔹 Serilog configuration
+//  Serilog configuration
 Log.Logger = new LoggerConfiguration()
     .Filter.ByIncludingOnly(Matching.WithProperty<string>("SourceContext", sc => sc == "SimpleRequestLoggingMiddleware"))
     .WriteTo.MSSqlServer(
@@ -41,19 +41,19 @@ Log.Logger = new LoggerConfiguration()
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
 
-// 🔹 Services registration
+//  Services registration
 ConfigureServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 
-// 🔹 Middleware pipeline
+//  Middleware pipeline
 ConfigureMiddleware(app);
 
 app.Run();
 
-// ==========================
-// 🔽 Helpers (Extension Style)
-// ==========================
+
+// Helpers (Extension Style)
+
 static void ConfigureServices(IServiceCollection services, IConfiguration config)
 {
     // Controllers + FluentValidation
@@ -77,8 +77,6 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     services.AddScoped<IBookService, BookService>();
     services.AddScoped<IBookRentalService, BookRentalService>();
     services.AddScoped<ICategoryService, CategoryService>();
-
-    // 🔹 Feedback servisini qeydiyyata al
     services.AddScoped<IFeedbackService, FeedbackService>();
 
     // ProblemDetails
@@ -126,7 +124,7 @@ static void ConfigureMiddleware(WebApplication app)
         app.UseSwaggerUI();
     }
 
-    // 🔹 Global Exception Middleware
+    // Global Exception Middleware (AppException dəstəyi)
     app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
     app.UseHttpsRedirection();
@@ -147,7 +145,7 @@ static void ConfigureMiddleware(WebApplication app)
     app.MapControllers();
 }
 
-// 🔹 Token və ya IP helper
+// Token və ya IP helper
 static string GetTokenOrIp(HttpContext ctx)
 {
     if (ctx.Request.Headers.TryGetValue("Authorization", out var auth) &&

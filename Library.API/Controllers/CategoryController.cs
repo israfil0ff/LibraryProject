@@ -1,5 +1,8 @@
-﻿using Library.BLL.Interfaces;
+﻿using Library.BLL;
+using Library.BLL.Exceptions;
+using Library.BLL.Interfaces;
 using Library.DBO;
+using Library.Entities.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 
@@ -19,69 +22,52 @@ namespace Library.API.Controllers
 
         [HttpGet]
         public IActionResult GetAll()
-            => Ok(ApiResponse.SuccessResponse(_service.GetAll()));
+        {
+            var categories = _service.GetAll();
+            return Ok(categories);
+        }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var category = _service.GetById(id);
-            return category == null
-                ? NotFound(ApiResponse.FailResponse($"Id={id} üçün məlumat tapılmadı."))
-                : Ok(ApiResponse.SuccessResponse(category));
+            var category = _service.GetById(id)
+                ?? throw new AppException(ErrorCode.CategoryNotFound);
+
+            return Ok(category);
         }
 
         [HttpPost]
-        public IActionResult Create(CategoryCreateDto dto)
+        public IActionResult Create([FromBody] CategoryCreateDto dto)
         {
-            try
-            {
-                var id = _service.Add(dto);
-                return Ok(ApiResponse.SuccessResponse(new { Id = id }, "Category created successfully"));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ApiResponse.FailResponse(ex.Message));
-            }
+            var id = _service.Add(dto);
+            return Ok(new { Id = id });
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, CategoryUpdateDto dto)
+        public IActionResult Update(int id, [FromBody] CategoryUpdateDto dto)
         {
             if (id != dto.Id)
-                return BadRequest(ApiResponse.FailResponse("ID uyğun gəlmir."));
+                throw new AppException(ErrorCode.InvalidInput, "ID uyğun gəlmir.");
 
-            try
-            {
-                var updatedId = _service.Update(dto);
-                return Ok(ApiResponse.SuccessResponse(new { Id = updatedId }, "Category updated successfully"));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ApiResponse.FailResponse(ex.Message));
-            }
+            var updatedId = _service.Update(dto);
+            return Ok(new { Id = updatedId });
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            try
-            {
-                var result = _service.Delete(id);
-                return result
-                    ? Ok(ApiResponse.SuccessResponse(result, "Category deleted successfully"))
-                    : NotFound(ApiResponse.FailResponse("Category not found"));
-            }
-            catch (Exception ex)
-            {
-                return NotFound(ApiResponse.FailResponse(ex.Message));
-            }
+            var success = _service.Delete(id);
+            if (!success)
+                throw new AppException(ErrorCode.CategoryNotFound);
+
+            return Ok(new { Success = true });
         }
 
         [HttpGet("with-books")]
         public IActionResult GetAllWithBooks()
         {
             var result = _service.GetAllWithBooks();
-            return Ok(ApiResponse.SuccessResponse(result));
+            return Ok(result);
         }
     }
 }

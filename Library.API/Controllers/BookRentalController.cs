@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Library.BLL;
+using Library.BLL.Interfaces;
 using Library.DBO;
 using Microsoft.AspNetCore.RateLimiting;
+using Library.BLL;
 
 namespace Library.API.Controllers
 {
@@ -20,28 +21,25 @@ namespace Library.API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
+            
             var rentals = _service.GetAll();
-            return Ok(ApiResponse.SuccessResponse(rentals));
+            return Ok(rentals);
         }
 
         [HttpPost("rent")]
         public IActionResult RentBook([FromBody] BookRentalCreateDto createDto)
         {
-            var result = _service.RentBook(createDto);
-
-            return result.Success
-                ? Ok(ApiResponse.SuccessResponse(result.Data, result.Message ?? "Book rented successfully"))
-                : BadRequest(ApiResponse.FailResponse(result.Message ?? "Failed to rent book"));
+           
+            var rental = _service.RentBook(createDto);
+            return Ok(rental);
         }
 
         [HttpPost("return")]
         public IActionResult ReturnBook([FromBody] BookReturnDto dto)
         {
+            
             var result = _service.ReturnBook(dto);
-
-            return result.Success
-                ? Ok(ApiResponse.SuccessResponse(result.Data, result.Message ?? "Book returned successfully"))
-                : BadRequest(ApiResponse.FailResponse(result.Message ?? "Failed to return book"));
+            return Ok(result);
         }
     }
 }

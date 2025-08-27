@@ -6,8 +6,8 @@ namespace Library.BLL
 {
     public interface IBookRentalService
     {
-        ApiResponse<List<BookRentalDto>> GetAll();
-        ApiResponse<BookRentalDto> RentBook(BookRentalCreateDto createDto);
-        ApiResponse<string> ReturnBook(BookReturnDto dto); 
+        List<BookRentalDto> GetAll();
+        BookRentalDto RentBook(BookRentalCreateDto createDto);
+        string ReturnBook(BookReturnDto dto);
     }
 }

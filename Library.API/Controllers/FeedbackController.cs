@@ -1,5 +1,8 @@
-﻿using Library.BLL.Interfaces;
+﻿using Library.BLL;
+using Library.BLL.Exceptions;
+using Library.BLL.Interfaces;
 using Library.DBO;
+using Library.Entities.Enums;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library.API.Controllers
@@ -18,8 +21,11 @@ namespace Library.API.Controllers
         [HttpPost]
         public IActionResult Add([FromBody] FeedbackCreateDto dto)
         {
+            if (string.IsNullOrWhiteSpace(dto.Comment))
+                throw new AppException(ErrorCode.InvalidFeedbackInput, "Feedback mətn boş ola bilməz.");
+
             _service.Add(dto);
-            return Ok(new { message = "Feedback submitted successfully!" });
+            return Ok(new { Success = true, Message = "Feedback uğurla göndərildi." });
         }
 
         [HttpGet]

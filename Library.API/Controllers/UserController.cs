@@ -1,6 +1,9 @@
-﻿using Library.DAL.Context;
+﻿using Library.BLL.Exceptions;
+using Library.DAL.Context;
 using Library.DBO;
 using Library.Entities;
+using Library.Entities.Enums;
+using Library.BLL.Helpers; 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Linq;
@@ -35,7 +38,7 @@ public class UserController : ControllerBase
     public IActionResult Register(UserRegisterDto dto)
     {
         if (_context.Users.Any(u => u.Nick == dto.Nick))
-            return BadRequest(ApiResponse.FailResponse("Bu nick artıq mövcuddur."));
+            throw new AppException(ErrorCode.InvalidInput, ErrorMessages.GetMessage(ErrorCode.InvalidInput));
 
         var user = new User
         {
@@ -46,7 +49,7 @@ public class UserController : ControllerBase
         _context.Users.Add(user);
         _context.SaveChanges();
 
-        return Ok(ApiResponse.SuccessResponse(new { user.Id, user.Nick }, "İstifadəçi uğurla yaradıldı."));
+        return Ok(ApiResponse.SuccessResponse(new { user.Id, user.Nick }, "İstifadəçi uğurla yaradıldı"));
     }
 
     [HttpPost("login")]
@@ -54,7 +57,7 @@ public class UserController : ControllerBase
     {
         var user = _context.Users.FirstOrDefault(u => u.Nick == dto.Nick && u.Password == dto.Password);
         if (user == null)
-            return BadRequest(ApiResponse.FailResponse("Yanlış nick və ya şifrə."));
+            throw new AppException(ErrorCode.InvalidCredentials, ErrorMessages.GetMessage(ErrorCode.InvalidCredentials));
 
         return Ok(ApiResponse.SuccessResponse(new
         {

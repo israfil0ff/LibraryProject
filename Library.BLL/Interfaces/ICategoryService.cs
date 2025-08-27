@@ -11,9 +11,9 @@ namespace Library.BLL.Interfaces
     {
         List<CategoryDto> GetAll();
         CategoryDto GetById(int id);
-        ApiResponse<List<CategoryWithBooksDto>> GetAllWithBooks();
-        int Add(CategoryCreateDto dto);          
-        int Update(CategoryUpdateDto dto);       
+        List<CategoryWithBooksDto> GetAllWithBooks(); 
+        int Add(CategoryCreateDto dto);
+        int Update(CategoryUpdateDto dto);
         bool Delete(int id);
     }
 }
