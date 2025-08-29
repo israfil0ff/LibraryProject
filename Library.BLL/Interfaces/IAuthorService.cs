@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Library.DBO;
-
-using Library.Entities;
+using Library.DBO.Pagination;
 
 namespace Library.BLL
 {
     public interface IAuthorService
     {
-        List<AuthorGetDTO> GetAll();
+        
+        PaginationResponse<AuthorGetDTO> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null);
+
         AuthorGetDTO GetById(int id);
         int Add(AuthorCreateDto authorDto);
         int Update(AuthorUpdateDto authorDto);

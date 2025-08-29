@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Library.BLL.Interfaces;
-using Library.DBO;
 using Microsoft.AspNetCore.RateLimiting;
 using Library.BLL;
+using Library.DBO;
+using Library.DBO.Pagination;
 
 namespace Library.API.Controllers
 {
@@ -18,18 +18,17 @@ namespace Library.API.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public IActionResult GetAll()
+        
+        [HttpGet("get-all")]
+        public IActionResult GetAll([FromQuery] PaginationRequest request)
         {
-            
-            var rentals = _service.GetAll();
+            var rentals = _service.GetAll(request);
             return Ok(rentals);
         }
 
         [HttpPost("rent")]
         public IActionResult RentBook([FromBody] BookRentalCreateDto createDto)
         {
-           
             var rental = _service.RentBook(createDto);
             return Ok(rental);
         }
@@ -37,9 +36,8 @@ namespace Library.API.Controllers
         [HttpPost("return")]
         public IActionResult ReturnBook([FromBody] BookReturnDto dto)
         {
-            
             var result = _service.ReturnBook(dto);
-            return Ok(result);
+            return Ok(new { Message = result });
         }
     }
 }

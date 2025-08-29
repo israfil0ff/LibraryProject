@@ -4,9 +4,9 @@ using Library.BLL.Helpers;
 using Library.BLL.Interfaces;
 using Library.DAL.Context;
 using Library.DBO;
+using Library.DBO.Pagination;
 using Library.Entities;
 using Library.Entities.Enums;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Library.BLL
@@ -32,14 +32,21 @@ namespace Library.BLL
             _context.SaveChanges();
         }
 
-        public IEnumerable<FeedbackGetDto> GetAll()
+       
+        public PaginationResponse<FeedbackGetDto> GetAll(PaginationRequest request)
         {
-            var feedbacks = _context.Feedbacks.ToList();
+            var query = _context.Feedbacks.AsQueryable();
 
-            if (feedbacks == null || !feedbacks.Any())
-                throw new AppException(ErrorCode.FeedbackNotFound);
+            var totalCount = query.Count();
 
-            return _mapper.Map<IEnumerable<FeedbackGetDto>>(feedbacks);
+            var items = query
+                .Skip((request.PageNumber - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .ToList()
+                .Select(f => _mapper.Map<FeedbackGetDto>(f))
+                .ToList();
+
+            return new PaginationResponse<FeedbackGetDto>(items, totalCount, request.PageNumber, request.PageSize);
         }
     }
 }

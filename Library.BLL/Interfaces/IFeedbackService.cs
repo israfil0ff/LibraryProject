@@ -1,4 +1,5 @@
 ﻿using Library.DBO;
+using Library.DBO.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Library.BLL.Interfaces
 {
     public interface IFeedbackService
     {
-        void Add(FeedbackCreateDto dto);              
-        IEnumerable<FeedbackGetDto> GetAll();        
+        void Add(FeedbackCreateDto dto);
+        PaginationResponse<FeedbackGetDto> GetAll(PaginationRequest request);
     }
 }

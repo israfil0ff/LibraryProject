@@ -1,17 +1,16 @@
 ﻿using Library.DBO;
-using System;
+using Library.DBO.Pagination;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.BLL.Interfaces
 {
     public interface ICategoryService
     {
-        List<CategoryDto> GetAll();
+       
+        PaginationResponse<CategoryDto> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null);
+        PaginationResponse<CategoryWithBooksDto> GetAllWithBooks(PaginationRequest request, Dictionary<string, string>? filters = null);
+
         CategoryDto GetById(int id);
-        List<CategoryWithBooksDto> GetAllWithBooks(); 
         int Add(CategoryCreateDto dto);
         int Update(CategoryUpdateDto dto);
         bool Delete(int id);

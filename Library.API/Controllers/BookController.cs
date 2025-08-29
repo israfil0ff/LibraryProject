@@ -1,6 +1,7 @@
 ﻿using Library.BLL;
 using Library.BLL.Exceptions;
 using Library.DBO;
+using Library.DBO.Pagination;
 using Library.Entities.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
@@ -19,10 +20,17 @@ namespace Library.API.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public IActionResult GetAll()
+
+        [HttpGet("get-all")]
+        public IActionResult GetAll([FromQuery] PaginationRequest request, [FromQuery] string? title, [FromQuery] string? authorName)
         {
-            var books = _service.GetAll();
+            var filters = new Dictionary<string, string>();
+            if (!string.IsNullOrWhiteSpace(title))
+                filters.Add("title", title);
+            if (!string.IsNullOrWhiteSpace(authorName))
+                filters.Add("authorName", authorName);
+
+            var books = _service.GetAll(request, filters);
             return Ok(books);
         }
 

@@ -1,12 +1,11 @@
 ﻿using Library.DBO;
-using System;
-using System.Collections.Generic;
+using Library.DBO.Pagination;
 
 namespace Library.BLL
 {
     public interface IBookRentalService
     {
-        List<BookRentalDto> GetAll();
+        PaginationResponse<BookRentalDto> GetAll(PaginationRequest request);
         BookRentalDto RentBook(BookRentalCreateDto createDto);
         string ReturnBook(BookReturnDto dto);
     }

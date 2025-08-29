@@ -2,6 +2,7 @@
 using Library.BLL.Exceptions;
 using Library.BLL.Interfaces;
 using Library.DBO;
+using Library.DBO.Pagination;
 using Library.Entities.Enums;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,10 +29,11 @@ namespace Library.API.Controllers
             return Ok(new { Success = true, Message = "Feedback uğurla göndərildi." });
         }
 
-        [HttpGet]
-        public IActionResult GetAll()
+        
+        [HttpGet("get-all")]
+        public IActionResult GetAll([FromQuery] PaginationRequest request)
         {
-            var feedbacks = _service.GetAll();
+            var feedbacks = _service.GetAll(request);
             return Ok(feedbacks);
         }
     }

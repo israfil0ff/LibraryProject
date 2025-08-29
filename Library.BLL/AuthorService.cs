@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using Library.DAL.Context;
 using Library.Entities;
 using Library.DBO;
+using Library.DBO.Pagination; 
 using Microsoft.EntityFrameworkCore;
 using Library.BLL.Exceptions;
 using Library.Entities.Enums;
@@ -20,12 +21,33 @@ public class AuthorService : IAuthorService
         _mapper = mapper;
     }
 
-    public List<AuthorGetDTO> GetAll()
-        => _context.Authors
+    public PaginationResponse<AuthorGetDTO> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null)
+    {
+        var query = _context.Authors
             .Include(a => a.Books)
             .Where(a => !a.IsDeleted)
+            .AsQueryable();
+
+        
+        if (filters != null)
+        {
+            foreach (var filter in filters)
+            {
+                if (filter.Key.Equals("name", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(filter.Value))
+                    query = query.Where(a => a.Name.Contains(filter.Value));
+            }
+        }
+
+        var totalCount = query.Count();
+
+        var items = query
+            .Skip((request.PageNumber - 1) * request.PageSize)
+            .Take(request.PageSize)
             .ProjectTo<AuthorGetDTO>(_mapper.ConfigurationProvider)
             .ToList();
+
+        return new PaginationResponse<AuthorGetDTO>(items, totalCount, request.PageNumber, request.PageSize);
+    }
 
     public AuthorGetDTO? GetById(int id)
     {

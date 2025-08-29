@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "Library.API.Controllers.AuthorController",
-    "Method": "GetAll",
-    "RelativePath": "api/Author",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Library.API.Controllers.AuthorController",
     "Method": "Add",
     "RelativePath": "api/Author",
     "HttpMethod": "POST",
@@ -74,13 +64,29 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library.API.Controllers.BookController",
+    "ContainingType": "Library.API.Controllers.AuthorController",
     "Method": "GetAll",
-    "RelativePath": "api/Book",
+    "RelativePath": "api/Author/get-all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -164,13 +170,55 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library.API.Controllers.BookRentalController",
+    "ContainingType": "Library.API.Controllers.BookController",
     "Method": "GetAll",
-    "RelativePath": "api/BookRental",
+    "RelativePath": "api/Book/get-all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "authorName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library.API.Controllers.BookRentalController",
+    "Method": "GetAll",
+    "RelativePath": "api/BookRental/get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -206,17 +254,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library.API.Controllers.CategoriesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Categories",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Library.API.Controllers.CategoriesController",
+    "ContainingType": "CategoriesController",
     "Method": "Create",
     "RelativePath": "api/Categories",
     "HttpMethod": "POST",
@@ -232,7 +270,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library.API.Controllers.CategoriesController",
+    "ContainingType": "CategoriesController",
     "Method": "GetById",
     "RelativePath": "api/Categories/{id}",
     "HttpMethod": "GET",
@@ -248,7 +286,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library.API.Controllers.CategoriesController",
+    "ContainingType": "CategoriesController",
     "Method": "Update",
     "RelativePath": "api/Categories/{id}",
     "HttpMethod": "PUT",
@@ -269,7 +307,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library.API.Controllers.CategoriesController",
+    "ContainingType": "CategoriesController",
     "Method": "Delete",
     "RelativePath": "api/Categories/{id}",
     "HttpMethod": "DELETE",
@@ -285,13 +323,55 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library.API.Controllers.CategoriesController",
+    "ContainingType": "CategoriesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Categories/get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CategoriesController",
     "Method": "GetAllWithBooks",
     "RelativePath": "api/Categories/with-books",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -313,11 +393,22 @@
   {
     "ContainingType": "Library.API.Controllers.FeedbackController",
     "Method": "GetAll",
-    "RelativePath": "api/Feedback",
+    "RelativePath": "api/Feedback/get-all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.RateLimiting;
 using Library.BLL.Exceptions;
 using Library.Entities.Enums;
 using Library.BLL;
+using Library.DBO.Pagination;
 
 namespace Library.API.Controllers
 {
@@ -20,10 +21,14 @@ namespace Library.API.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public IActionResult GetAll()
+        [HttpGet("get-all")]
+        public IActionResult GetAll([FromQuery] PaginationRequest request, [FromQuery] string? name)
         {
-            var authors = _service.GetAll();
+            var filters = new Dictionary<string, string>();
+            if (!string.IsNullOrWhiteSpace(name))
+                filters.Add("name", name);
+
+            var authors = _service.GetAll(request, filters);
             return Ok(authors);
         }
 

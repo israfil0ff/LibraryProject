@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using Library.DAL.Context;
 using Library.DBO;
+using Library.DBO.Pagination;
 using Library.Entities;
 using Library.Entities.Enums;
 using Library.BLL.Exceptions;
@@ -19,13 +21,38 @@ public class BookService : IBookService
         _mapper = mapper;
     }
 
-    public List<BookGetDTO> GetAll()
-        => _context.Books
+
+    public PaginationResponse<BookGetDTO> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null)
+    {
+        var query = _context.Books
             .Include(b => b.Author)
             .Include(b => b.Category)
-            .ToList()
-            .Select(b => _mapper.Map<BookGetDTO>(b))
+            .Where(b => !b.IsDeleted)
+            .AsQueryable();
+
+        
+        if (filters != null)
+        {
+            foreach (var filter in filters)
+            {
+                if (filter.Key.Equals("title", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(filter.Value))
+                    query = query.Where(b => b.Title.Contains(filter.Value));
+
+                if (filter.Key.Equals("authorName", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(filter.Value))
+                    query = query.Where(b => b.Author.Name.Contains(filter.Value));
+            }
+        }
+
+        var totalCount = query.Count();
+
+        var items = query
+            .Skip((request.PageNumber - 1) * request.PageSize)
+            .Take(request.PageSize)
+            .ProjectTo<BookGetDTO>(_mapper.ConfigurationProvider)
             .ToList();
+
+        return new PaginationResponse<BookGetDTO>(items, totalCount, request.PageNumber, request.PageSize);
+    }
 
     public BookGetDTO? GetById(int id)
     {

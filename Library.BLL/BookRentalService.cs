@@ -2,6 +2,7 @@
 using AutoMapper.QueryableExtensions;
 using Library.DAL.Context;
 using Library.DBO;
+using Library.DBO.Pagination;
 using Library.Entities;
 using Library.Entities.Enums;
 using Library.BLL.Exceptions;
@@ -20,14 +21,23 @@ public class BookRentalService : IBookRentalService
         _mapper = mapper;
     }
 
-    public List<BookRentalDto> GetAll()
+  
+    public PaginationResponse<BookRentalDto> GetAll(PaginationRequest request)
     {
-        var rentals = _context.BookRentals
+        var query = _context.BookRentals
             .Include(r => r.Book)
             .Include(r => r.User)
+            .AsQueryable();
+
+        var totalCount = query.Count();
+
+        var items = query
+            .Skip((request.PageNumber - 1) * request.PageSize)
+            .Take(request.PageSize)
+            .ProjectTo<BookRentalDto>(_mapper.ConfigurationProvider)
             .ToList();
 
-        return _mapper.Map<List<BookRentalDto>>(rentals);
+        return new PaginationResponse<BookRentalDto>(items, totalCount, request.PageNumber, request.PageSize);
     }
 
     public BookRentalDto RentBook(BookRentalCreateDto dto)
