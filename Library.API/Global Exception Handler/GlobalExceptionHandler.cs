@@ -1,8 +1,8 @@
 ﻿using Library.BLL.Exceptions;
 using Library.Entities.Enums;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -33,6 +33,7 @@ public class GlobalExceptionHandlerMiddleware
     {
         context.Response.ContentType = "application/json";
 
+        // ✅ Enum-based custom exception
         if (exception is AppException appEx)
         {
             context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
@@ -44,7 +45,29 @@ public class GlobalExceptionHandlerMiddleware
             });
         }
 
-        // Digər xətalar üçün generic
+        // ✅ ArgumentException → 400 BadRequest
+        if (exception is ArgumentException argEx)
+        {
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+
+            return context.Response.WriteAsJsonAsync(new
+            {
+                message = argEx.Message
+            });
+        }
+
+        // ✅ InvalidOperationException → 404 NotFound
+        if (exception is InvalidOperationException invOpEx)
+        {
+            context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+
+            return context.Response.WriteAsJsonAsync(new
+            {
+                message = invOpEx.Message
+            });
+        }
+
+        // ✅ Digər xətalar üçün generic 500
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
         return context.Response.WriteAsJsonAsync(new

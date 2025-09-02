@@ -412,6 +412,64 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Library.API.Controllers.ReportsController",
+    "Method": "GetMonthlyRentalStats",
+    "RelativePath": "api/Reports/monthly-stats/{year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library.API.Controllers.ReportsController",
+    "Method": "GetMostRentedBooks",
+    "RelativePath": "api/Reports/most-rented-books/{top}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "top",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library.API.Controllers.ReportsController",
+    "Method": "GetOverdueBooks",
+    "RelativePath": "api/Reports/overdue-books",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library.API.Controllers.ReportsController",
+    "Method": "GetTopUsers",
+    "RelativePath": "api/Reports/top-users/{top}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "top",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "UserController",
     "Method": "Login",
     "RelativePath": "api/User/login",

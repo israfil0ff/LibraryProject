@@ -51,8 +51,9 @@ ConfigureMiddleware(app);
 
 app.Run();
 
-
+// =======================
 // Helpers (Extension Style)
+// =======================
 
 static void ConfigureServices(IServiceCollection services, IConfiguration config)
 {
@@ -78,6 +79,7 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     services.AddScoped<IBookRentalService, BookRentalService>();
     services.AddScoped<ICategoryService, CategoryService>();
     services.AddScoped<IFeedbackService, FeedbackService>();
+    services.AddScoped<IReportService, ReportService>();
 
     // ProblemDetails
     services.AddProblemDetails();
