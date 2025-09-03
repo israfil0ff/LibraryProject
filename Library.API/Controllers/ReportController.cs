@@ -1,4 +1,5 @@
 ﻿using Library.BLL;
+using Library.DBO.Reports;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -15,15 +16,15 @@ namespace Library.API.Controllers
             _reportService = reportService;
         }
 
-        /// <summary>
+        
         /// Ən çox icarəyə verilən kitabların siyahısı
-        /// </summary>
-        [HttpGet("most-rented-books/{top}")]
-        public IActionResult GetMostRentedBooks(int top = 10)
+        
+        [HttpPost("most-rented-books/{top?}")]
+        public IActionResult GetMostRentedBooks(int top = 10, [FromBody] BookReportFilterDto filter = null)
         {
             try
             {
-                var result = _reportService.GetMostRentedBooks(top);
+                var result = _reportService.GetMostRentedBooks(top, filter);
                 return Ok(result);
             }
             catch (ArgumentException ex)
@@ -40,15 +41,15 @@ namespace Library.API.Controllers
             }
         }
 
-        /// <summary>
+        
         /// Ən çox kitab götürən istifadəçilər
-        /// </summary>
-        [HttpGet("top-users/{top}")]
-        public IActionResult GetTopUsers(int top = 10)
+        
+        [HttpPost("top-users/{top?}")]
+        public IActionResult GetTopUsers(int top = 10, [FromBody] UserReportFilterDto filter = null)
         {
             try
             {
-                var result = _reportService.GetTopUsers(top);
+                var result = _reportService.GetTopUsers(top, filter);
                 return Ok(result);
             }
             catch (ArgumentException ex)
@@ -65,15 +66,15 @@ namespace Library.API.Controllers
             }
         }
 
-        /// <summary>
+        
         /// Gecikmiş kitabların siyahısı
-        /// </summary>
-        [HttpGet("overdue-books")]
-        public IActionResult GetOverdueBooks()
+        
+        [HttpPost("overdue-books")]
+        public IActionResult GetOverdueBooks([FromBody] OverdueReportFilterDto filter = null)
         {
             try
             {
-                var result = _reportService.GetOverdueBooks();
+                var result = _reportService.GetOverdueBooks(filter);
                 return Ok(result);
             }
             catch (InvalidOperationException ex)
@@ -86,15 +87,15 @@ namespace Library.API.Controllers
             }
         }
 
-        /// <summary>
+     
         /// Aylıq icarə statistikası
-        /// </summary>
-        [HttpGet("monthly-stats/{year}")]
-        public IActionResult GetMonthlyRentalStats(int year)
+       
+        [HttpPost("monthly-stats")]
+        public IActionResult GetMonthlyRentalStats([FromBody] MonthlyRentalFilterDto filter)
         {
             try
             {
-                var result = _reportService.GetMonthlyRentalStats(year);
+                var result = _reportService.GetMonthlyRentalStats(filter);
                 return Ok(result);
             }
             catch (ArgumentException ex)

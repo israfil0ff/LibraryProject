@@ -16,16 +16,32 @@ namespace Library.BLL
             _context = context;
         }
 
-        /// <summary>
-        /// Ən çox icarəyə verilən kitabların siyahısı
-        /// </summary>
-        public IEnumerable<BookReportDto> GetMostRentedBooks(int top)
+        
+        /// Ən çox icarəyə verilən kitabların siyahısı 
+       
+        public IEnumerable<BookReportDto> GetMostRentedBooks(int top, BookReportFilterDto filter)
         {
             if (top <= 0)
                 throw new ArgumentException("Top parametri 0-dan böyük olmalıdır.");
 
-            var result = _context.BookRentals
+            var query = _context.BookRentals
                 .Include(r => r.Book)
+                .ThenInclude(b => b.Author)
+                .AsQueryable();
+
+            if (filter?.StartDate != null)
+                query = query.Where(r => r.StartDate >= filter.StartDate);
+
+            if (filter?.EndDate != null)
+                query = query.Where(r => r.StartDate <= filter.EndDate);
+
+            if (filter?.AuthorId != null)
+                query = query.Where(r => r.Book.AuthorId == filter.AuthorId);
+
+            if (filter?.CategoryId != null)
+                query = query.Where(r => r.Book.CategoryId == filter.CategoryId);
+
+            var result = query
                 .GroupBy(r => r.BookId)
                 .Select(g => new BookReportDto
                 {
@@ -43,16 +59,25 @@ namespace Library.BLL
             return result;
         }
 
-        /// <summary>
-        /// Ən çox kitab götürən istifadəçilər
-        /// </summary>
-        public IEnumerable<UserReportDto> GetTopUsers(int top)
+
+        /// Ən çox kitab götürən istifadəçilər 
+
+        public IEnumerable<UserReportDto> GetTopUsers(int top, UserReportFilterDto filter)
         {
             if (top <= 0)
                 throw new ArgumentException("Top parametri 0-dan böyük olmalıdır.");
 
-            var result = _context.BookRentals
+            var query = _context.BookRentals
                 .Include(r => r.User)
+                .AsQueryable();
+
+            if (filter?.StartDate != null)
+                query = query.Where(r => r.StartDate >= filter.StartDate);
+
+            if (filter?.EndDate != null)
+                query = query.Where(r => r.StartDate <= filter.EndDate);
+
+            var result = query
                 .GroupBy(r => r.UserId)
                 .Select(g => new UserReportDto
                 {
@@ -70,17 +95,26 @@ namespace Library.BLL
             return result;
         }
 
-        /// <summary>
-        /// Gecikmiş kitabların siyahısı
-        /// </summary>
-        public IEnumerable<OverdueReportDto> GetOverdueBooks()
+
+        /// Gecikmiş kitabların siyahısı 
+
+        public IEnumerable<OverdueReportDto> GetOverdueBooks(OverdueReportFilterDto filter)
         {
             var today = DateTime.UtcNow;
 
-            var result = _context.BookRentals
+            var query = _context.BookRentals
                 .Include(r => r.Book)
                 .Include(r => r.User)
                 .Where(r => r.EndDate < today && r.ReturnDate == null)
+                .AsQueryable();
+
+            if (filter?.UserId != null)
+                query = query.Where(r => r.UserId == filter.UserId);
+
+            if (filter?.DueBefore != null)
+                query = query.Where(r => r.EndDate <= filter.DueBefore);
+
+            var result = query
                 .Select(r => new OverdueReportDto
                 {
                     RentalId = r.Id,
@@ -97,16 +131,22 @@ namespace Library.BLL
             return result;
         }
 
-        /// <summary>
-        /// Aylıq icarə statistikası
-        /// </summary>
-        public IEnumerable<MonthlyRentalStatDto> GetMonthlyRentalStats(int year)
+       
+        /// Aylıq icarə statistikası 
+       
+        public IEnumerable<MonthlyRentalStatDto> GetMonthlyRentalStats(MonthlyRentalFilterDto filter)
         {
-            if (year <= 0)
+            if (filter?.Year == null || filter.Year <= 0)
                 throw new ArgumentException("İl düzgün daxil edilməyib.");
 
-            var result = _context.BookRentals
-                .Where(r => r.StartDate.Year == year)
+            var query = _context.BookRentals
+                .Where(r => r.StartDate.Year == filter.Year)
+                .AsQueryable();
+
+            if (filter.Month != null)
+                query = query.Where(r => r.StartDate.Month == filter.Month);
+
+            var result = query
                 .GroupBy(r => r.StartDate.Month)
                 .Select(g => new MonthlyRentalStatDto
                 {
@@ -117,7 +157,7 @@ namespace Library.BLL
                 .ToList();
 
             if (!result.Any())
-                throw new InvalidOperationException($"{year}-ci il üçün statistik məlumat tapılmadı.");
+                throw new InvalidOperationException($"{filter.Year}-ci il üçün statistik məlumat tapılmadı.");
 
             return result;
         }

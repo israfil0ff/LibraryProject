@@ -414,14 +414,14 @@
   {
     "ContainingType": "Library.API.Controllers.ReportsController",
     "Method": "GetMonthlyRentalStats",
-    "RelativePath": "api/Reports/monthly-stats/{year}",
-    "HttpMethod": "GET",
+    "RelativePath": "api/Reports/monthly-stats",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "year",
-        "Type": "System.Int32",
+        "Name": "filter",
+        "Type": "Library.DBO.Reports.MonthlyRentalFilterDto",
         "IsRequired": true
       }
     ],
@@ -431,14 +431,19 @@
     "ContainingType": "Library.API.Controllers.ReportsController",
     "Method": "GetMostRentedBooks",
     "RelativePath": "api/Reports/most-rented-books/{top}",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "top",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
+      },
+      {
+        "Name": "filter",
+        "Type": "Library.DBO.Reports.BookReportFilterDto",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -447,24 +452,35 @@
     "ContainingType": "Library.API.Controllers.ReportsController",
     "Method": "GetOverdueBooks",
     "RelativePath": "api/Reports/overdue-books",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Library.DBO.Reports.OverdueReportFilterDto",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Library.API.Controllers.ReportsController",
     "Method": "GetTopUsers",
     "RelativePath": "api/Reports/top-users/{top}",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "top",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
+      },
+      {
+        "Name": "filter",
+        "Type": "Library.DBO.Reports.UserReportFilterDto",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
