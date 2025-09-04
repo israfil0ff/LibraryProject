@@ -1,36 +1,30 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Library.DAL.Context;
+using Library.DAL.Repositories;
 using Library.DBO;
 using Library.DBO.Pagination;
 using Library.Entities;
 using Library.Entities.Enums;
 using Library.BLL.Exceptions;
-using Microsoft.EntityFrameworkCore;
 
 namespace Library.BLL;
 
 public class BookService : IBookService
 {
-    private readonly LibraryDbContext _context;
+    private readonly IBookRepository _bookRepository;
     private readonly IMapper _mapper;
 
-    public BookService(LibraryDbContext context, IMapper mapper)
+    public BookService(IBookRepository bookRepository, IMapper mapper)
     {
-        _context = context;
+        _bookRepository = bookRepository;
         _mapper = mapper;
     }
 
-
     public PaginationResponse<BookGetDTO> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null)
     {
-        var query = _context.Books
-            .Include(b => b.Author)
-            .Include(b => b.Category)
-            .Where(b => !b.IsDeleted)
-            .AsQueryable();
+        var query = _bookRepository.GetQueryable();
 
-        
+        // filter
         if (filters != null)
         {
             foreach (var filter in filters)
@@ -56,59 +50,56 @@ public class BookService : IBookService
 
     public BookGetDTO? GetById(int id)
     {
-        var book = _context.Books
-            .Include(b => b.Author)
-            .Include(b => b.Category)
-            .FirstOrDefault(b => b.Id == id);
-
+        var book = _bookRepository.GetById(id);
         return book == null ? null : _mapper.Map<BookGetDTO>(book);
     }
 
     public int Add(BookCreateDto dto)
     {
-        if (dto.CategoryId != null && !_context.Categories.Any(c => c.Id == dto.CategoryId && !c.IsDeleted))
+        if (dto.CategoryId != null && !_bookRepository.CategoryExists(dto.CategoryId.Value))
             throw new AppException(ErrorCode.CategoryNotFound);
 
         var book = _mapper.Map<Book>(dto);
-        _context.Books.Add(book);
-        _context.SaveChanges();
+        _bookRepository.Add(book);
+        _bookRepository.Save();
 
         return book.Id;
     }
 
     public int Update(BookUpdateDto dto)
     {
-        var book = _context.Books.FirstOrDefault(b => b.Id == dto.Id)
+        var book = _bookRepository.GetById(dto.Id)
             ?? throw new AppException(ErrorCode.BookNotFound);
 
-        if (dto.CategoryId != null && !_context.Categories.Any(c => c.Id == dto.CategoryId && !c.IsDeleted))
+        if (dto.CategoryId != null && !_bookRepository.CategoryExists(dto.CategoryId.Value))
             throw new AppException(ErrorCode.CategoryNotFound);
 
         _mapper.Map(dto, book);
-        _context.SaveChanges();
+        _bookRepository.Update(book);
+        _bookRepository.Save();
 
         return book.Id;
     }
 
     public bool Delete(int id)
     {
-        var book = _context.Books.FirstOrDefault(b => b.Id == id);
-        if (book == null)
-            throw new AppException(ErrorCode.BookNotFound);
+        var book = _bookRepository.GetById(id)
+            ?? throw new AppException(ErrorCode.BookNotFound);
 
-        _context.Books.Remove(book);
-        _context.SaveChanges();
+        _bookRepository.Delete(book);   
+        _bookRepository.Save();
 
         return true;
     }
 
     public bool AddCount(int bookId, int count)
     {
-        var book = _context.Books.FirstOrDefault(b => b.Id == bookId)
+        var book = _bookRepository.GetById(bookId)
             ?? throw new AppException(ErrorCode.BookNotFound);
 
         book.AvailableCount += count;
-        _context.SaveChanges();
+        _bookRepository.Update(book);
+        _bookRepository.Save();
 
         return true;
     }

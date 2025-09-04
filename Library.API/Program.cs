@@ -2,6 +2,7 @@
 using Library.BLL;
 using Library.BLL.Interfaces;
 using Library.DAL.Context;
+using Library.DAL.Repositories;
 using Library.DBO;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -73,7 +74,10 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     services.AddDbContext<LibraryDbContext>(options =>
         options.UseSqlServer(config.GetConnectionString("DefaultConnection")));
 
-    // Services
+    // 🔹 Repository DI
+    services.AddScoped<IBookRepository, BookRepository>();
+
+    // Services DI
     services.AddScoped<IAuthorService, AuthorService>();
     services.AddScoped<IBookService, BookService>();
     services.AddScoped<IBookRentalService, BookRentalService>();
