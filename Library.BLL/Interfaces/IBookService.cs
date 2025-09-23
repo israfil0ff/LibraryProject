@@ -7,7 +7,8 @@ namespace Library.BLL
 {
     public interface IBookService
     {
-     
+        Task<IEnumerable<BookGetDTO>> GetAllBooksAsync();
+        Task<IEnumerable<BookGetDTO>> GetBooksByTopicAsync(string topic);
         PaginationResponse<BookGetDTO> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null);
 
         BookGetDTO GetById(int id);

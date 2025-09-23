@@ -18,4 +18,5 @@ public class Book : AuditableEntity
 
     [JsonIgnore] 
     public Author? Author { get; set; }
+    public string? Description { get; set; }
 }

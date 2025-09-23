@@ -13,5 +13,6 @@ namespace Library.BLL
         int Add(AuthorCreateDto authorDto);
         int Update(AuthorUpdateDto authorDto);
         bool Delete(int id);
+        Task<IEnumerable<AuthorGetDTO>> GetAllAuthorsAsync();
     }
 }

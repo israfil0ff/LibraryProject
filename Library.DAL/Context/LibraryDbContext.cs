@@ -19,6 +19,7 @@ namespace Library.DAL.Context
         public DbSet<ApiLog> ApiLogs { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<FileEntity> Files { get; set; }
 
 
         public override int SaveChanges()

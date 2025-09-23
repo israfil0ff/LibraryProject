@@ -1,0 +1,6 @@
+https://leetcode.com/problems/two-sum/submissions/1766018148
+https://leetcode.com/problems/palindrome-number/submissions/1766025661
+https://leetcode.com/problems/roman-to-integer/submissions/1766037565
+https://leetcode.com/problems/valid-parentheses/submissions/1767088326
+https://leetcode.com/problems/merge-two-sorted-lists/submissions/1767093566
+https://leetcode.com/problems/add-two-numbers/submissions/1767101719

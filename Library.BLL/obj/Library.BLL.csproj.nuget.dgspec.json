@@ -76,6 +76,30 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.ML.Recommender": {
+              "target": "Package",
+              "version": "[0.22.2, )"
+            },
+            "Mscc.GenerativeAI": {
+              "target": "Package",
+              "version": "[2.8.9, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -188,6 +212,10 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -291,6 +319,10 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -389,6 +421,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

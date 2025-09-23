@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject-master\\Library.API\\wwwroot\\uploads\\qudpnfeo.sbe.txt",
+      "PackagePath": "staticwebassets\\uploads\\qudpnfeo.sbe.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Library.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Library.API.props",
+      "PackagePath": "build\\Library.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Library.API.props",
+      "PackagePath": "buildMultiTargeting\\Library.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Library.API.props",
+      "PackagePath": "buildTransitive\\Library.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

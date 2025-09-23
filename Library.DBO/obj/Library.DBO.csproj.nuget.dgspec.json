@@ -74,6 +74,10 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -172,6 +176,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

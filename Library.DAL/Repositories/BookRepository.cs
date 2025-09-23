@@ -1,6 +1,9 @@
 ﻿using Library.DAL.Context;
 using Library.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Library.DAL.Repositories
 {
@@ -15,7 +18,7 @@ namespace Library.DAL.Repositories
 
         public IEnumerable<Book> GetAll(Dictionary<string, string>? filters = null)
         {
-            IQueryable<Book> query = _context.Books.Include(b => b.Author);
+            IQueryable<Book> query = _context.Books.Include(b => b.Author).Include(b => b.Category);
 
             if (filters != null)
             {
@@ -70,6 +73,15 @@ namespace Library.DAL.Repositories
         public void Save()
         {
             _context.SaveChanges();
+        }
+
+        
+        public async Task<IEnumerable<Book>> GetAllAsync()
+        {
+            return await _context.Books
+                .Include(b => b.Author)
+                .Include(b => b.Category)
+                .ToListAsync();
         }
     }
 }

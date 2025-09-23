@@ -3,10 +3,14 @@ using AutoMapper.QueryableExtensions;
 using Library.DAL.Context;
 using Library.Entities;
 using Library.DBO;
-using Library.DBO.Pagination; 
+using Library.DBO.Pagination;
 using Microsoft.EntityFrameworkCore;
 using Library.BLL.Exceptions;
 using Library.Entities.Enums;
+using Library.BLL.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Library.BLL;
 
@@ -21,6 +25,9 @@ public class AuthorService : IAuthorService
         _mapper = mapper;
     }
 
+    // ============================
+    // Pagination + filter
+    // ============================
     public PaginationResponse<AuthorGetDTO> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null)
     {
         var query = _context.Authors
@@ -28,12 +35,11 @@ public class AuthorService : IAuthorService
             .Where(a => !a.IsDeleted)
             .AsQueryable();
 
-        
         if (filters != null)
         {
             foreach (var filter in filters)
             {
-                if (filter.Key.Equals("name", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(filter.Value))
+                if (filter.Key.Equals("name", System.StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(filter.Value))
                     query = query.Where(a => a.Name.Contains(filter.Value));
             }
         }
@@ -43,18 +49,37 @@ public class AuthorService : IAuthorService
         var items = query
             .Skip((request.PageNumber - 1) * request.PageSize)
             .Take(request.PageSize)
-            .ProjectTo<AuthorGetDTO>(_mapper.ConfigurationProvider)
+            .Select(a => new AuthorGetDTO
+            {
+                Id = a.Id,
+                Name = a.Name,
+                isDeleted = a.IsDeleted,
+                BookTitles = a.Books.Count > 0
+    ? a.Books.Where(b => !b.IsDeleted).Select(b => b.Title).ToList()
+    : new List<string>()
+            })
             .ToList();
 
         return new PaginationResponse<AuthorGetDTO>(items, totalCount, request.PageNumber, request.PageSize);
     }
 
+    // ============================
+    // Get by Id
+    // ============================
     public AuthorGetDTO? GetById(int id)
     {
         var author = _context.Authors
             .Include(a => a.Books)
             .Where(a => a.Id == id && !a.IsDeleted)
-            .ProjectTo<AuthorGetDTO>(_mapper.ConfigurationProvider)
+            .Select(a => new AuthorGetDTO
+            {
+                Id = a.Id,
+                Name = a.Name,
+                isDeleted = a.IsDeleted,
+                BookTitles = a.Books.Count > 0
+    ? a.Books.Where(b => !b.IsDeleted).Select(b => b.Title).ToList()
+    : new List<string>()
+            })
             .FirstOrDefault();
 
         if (author == null)
@@ -63,29 +88,42 @@ public class AuthorService : IAuthorService
         return author;
     }
 
+    // ============================
+    // Add author
+    // ============================
     public int Add(AuthorCreateDto authorDto)
     {
         if (string.IsNullOrWhiteSpace(authorDto.Name))
             throw new AppException(ErrorCode.InvalidAuthorInput);
 
-        var author = _mapper.Map<Author>(authorDto);
+        var author = new Author
+        {
+            Name = authorDto.Name
+        };
+
         _context.Authors.Add(author);
         _context.SaveChanges();
 
         return author.Id;
     }
 
+    // ============================
+    // Update author
+    // ============================
     public int Update(AuthorUpdateDto authorDto)
     {
         var author = _context.Authors.FirstOrDefault(a => a.Id == authorDto.Id && !a.IsDeleted)
             ?? throw new AppException(ErrorCode.AuthorNotFound);
 
-        _mapper.Map(authorDto, author);
+        author.Name = authorDto.Name;
         _context.SaveChanges();
 
         return author.Id;
     }
 
+    // ============================
+    // Delete author
+    // ============================
     public bool Delete(int id)
     {
         var author = _context.Authors.FirstOrDefault(a => a.Id == id && !a.IsDeleted)
@@ -95,5 +133,24 @@ public class AuthorService : IAuthorService
         _context.SaveChanges();
 
         return true;
+    }
+
+    // ============================
+    // 🔹 AI üçün async metod
+    // ============================
+    public async Task<IEnumerable<AuthorGetDTO>> GetAllAuthorsAsync()
+    {
+        var authors = await _context.Authors
+            .Include(a => a.Books)
+            .Where(a => !a.IsDeleted)
+            .ToListAsync();
+
+        return authors.Select(a => new AuthorGetDTO
+        {
+            Id = a.Id,
+            Name = a.Name,
+            isDeleted = a.IsDeleted,
+            BookTitles = a.Books?.Where(b => !b.IsDeleted).Select(b => b.Title).ToList()
+        });
     }
 }

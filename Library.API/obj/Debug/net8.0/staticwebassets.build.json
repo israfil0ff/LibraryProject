@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "sRlabDu8hawBerzUlK9IVAKJvvjP3JxTPLR1PxwvZFA=",
+  "Hash": "3oruEZbjgCrrdobpgmxzXhP6zwiGHCoVkIokIQmJiK0=",
   "Source": "Library.API",
   "BasePath": "_content/Library.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Library.API\\wwwroot",
+      "Source": "Library.API",
+      "ContentRoot": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject-master\\Library.API\\wwwroot\\",
+      "BasePath": "_content/Library.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject-master\\Library.API\\wwwroot\\uploads\\qudpnfeo.sbe.txt",
+      "SourceId": "Library.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\volunteer12\\Desktop\\Omer's folder\\LibraryProject-master\\Library.API\\wwwroot\\",
+      "BasePath": "_content/Library.API",
+      "RelativePath": "uploads/qudpnfeo.sbe.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\qudpnfeo.sbe.txt"
+    }
+  ]
 }
