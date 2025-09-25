@@ -11,5 +11,7 @@ namespace Library.DBO.FileDTOs
         public string FilePath { get; set; } = null!;
         public string ContentType { get; set; } = null!;
         public DateTime UploadedAt { get; set; }
+        public string UserId { get; set; } = string.Empty;
+        public long FileSize { get; set; }
     }
 }

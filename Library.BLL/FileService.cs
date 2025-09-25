@@ -1,8 +1,8 @@
 ﻿using Library.BLL.Interfaces;
 using Library.DAL.Repositories;
 using Library.DBO.FileDTOs;
-using Library.Entities;
 using Microsoft.AspNetCore.Hosting;
+using Library.Entities;
 
 namespace Library.BLL.Services
 {
@@ -19,15 +19,18 @@ namespace Library.BLL.Services
 
         public async Task<IEnumerable<FileDto>> GetAllAsync()
         {
-            var files = await Task.FromResult(_repository.GetType()
-                .GetProperty("Files") != null ? _repository.GetType() : null);
+            var files = await _repository.GetAllFilesAsync();
 
-            return files switch
+            return files.Select(f => new FileDto
             {
-                null => new List<FileDto>(),
-                _ => await Task.FromResult(_repository.GetType()
-                    .GetProperty("Files") != null ? new List<FileDto>() : new List<FileDto>())
-            };
+                Id = f.Id,
+                FileName = f.FileName,
+                FilePath = f.FilePath,
+                ContentType = f.ContentType,
+                UploadedAt = f.UploadedAt,
+                FileSize = f.FileSize,
+                UserId = f.UserId
+            });
         }
 
         public async Task<FileDto?> GetByIdAsync(int id)
@@ -41,11 +44,13 @@ namespace Library.BLL.Services
                 FileName = file.FileName,
                 FilePath = file.FilePath,
                 ContentType = file.ContentType,
-                UploadedAt = file.UploadedAt
+                UploadedAt = file.UploadedAt,
+                FileSize = file.FileSize,
+                UserId = file.UserId
             };
         }
 
-        public async Task<FileDto> UploadAsync(FileUploadDto dto)
+        public async Task<FileDto> UploadAsync(FileUploadDto dto, string userId)
         {
             var uploadsPath = Path.Combine(_env.WebRootPath ?? "wwwroot", "uploads");
             Directory.CreateDirectory(uploadsPath);
@@ -63,7 +68,9 @@ namespace Library.BLL.Services
                 FileName = dto.File.FileName,
                 FilePath = "/uploads/" + uniqueFileName,
                 ContentType = dto.File.ContentType,
-                UploadedAt = DateTime.UtcNow
+                UploadedAt = DateTime.UtcNow,
+                FileSize = dto.File.Length,
+                UserId = userId
             };
 
             await _repository.AddFileAsync(entity);
@@ -74,14 +81,20 @@ namespace Library.BLL.Services
                 FileName = entity.FileName,
                 FilePath = entity.FilePath,
                 ContentType = entity.ContentType,
-                UploadedAt = entity.UploadedAt
+                UploadedAt = entity.UploadedAt,
+                FileSize = entity.FileSize,
+                UserId = entity.UserId
             };
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id, string userId, bool isAdmin)
         {
             var file = await _repository.GetFileAsync(id);
             if (file == null) return false;
+
+            // user yalnız öz faylını silə bilər
+            if (!isAdmin && file.UserId != userId)
+                return false;
 
             var physicalPath = Path.Combine(_env.WebRootPath ?? "wwwroot", file.FilePath.TrimStart('/').Replace("/", "\\"));
             if (File.Exists(physicalPath))

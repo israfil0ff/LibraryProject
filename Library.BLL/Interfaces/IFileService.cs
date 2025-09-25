@@ -7,15 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.DBO.FileDTOs;
 
-
-
 namespace Library.BLL.Interfaces
 {
     public interface IFileService
     {
         Task<IEnumerable<FileDto>> GetAllAsync();
         Task<FileDto?> GetByIdAsync(int id);
-        Task<FileDto> UploadAsync(FileUploadDto dto);
-        Task<bool> DeleteAsync(int id);
+        Task<FileDto> UploadAsync(FileUploadDto dto, string userId);
+        Task<bool> DeleteAsync(int id, string userId, bool isAdmin);
     }
 }

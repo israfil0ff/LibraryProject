@@ -248,3 +248,4 @@ C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\bin
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\bin\Debug\net8.0\JsonSchema.Net.Generation.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\bin\Debug\net8.0\Mscc.GenerativeAI.dll
 C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\bin\Debug\net8.0\Library.API.staticwebassets.runtime.json
+C:\Users\volunteer12\Desktop\Omer's folder\LibraryProject-master\Library.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

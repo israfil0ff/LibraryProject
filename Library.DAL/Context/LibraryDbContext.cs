@@ -20,6 +20,9 @@ namespace Library.DAL.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<FileEntity> Files { get; set; }
+        public DbSet<UserFile> UserFiles { get; set; }
+        
+
 
 
         public override int SaveChanges()

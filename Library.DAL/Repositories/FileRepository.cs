@@ -1,6 +1,7 @@
 ﻿using Library.Entities;
 using Library.DAL.Context;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Library.DAL.Repositories
 {
@@ -13,11 +14,20 @@ namespace Library.DAL.Repositories
             _context = context;
         }
 
-        public async Task<FileEntity> AddFileAsync(FileEntity file)
+        public async Task<IEnumerable<FileEntity>> GetAllFilesAsync()
+        {
+            return await _context.Files.ToListAsync();
+        }
+
+        public async Task<FileEntity?> GetFileAsync(int id)
+        {
+            return await _context.Files.FindAsync(id);
+        }
+
+        public async Task AddFileAsync(FileEntity file)
         {
             _context.Files.Add(file);
             await _context.SaveChangesAsync();
-            return file;
         }
 
         public async Task<bool> DeleteFileAsync(int id)
@@ -28,11 +38,6 @@ namespace Library.DAL.Repositories
             _context.Files.Remove(file);
             await _context.SaveChangesAsync();
             return true;
-        }
-
-        public async Task<FileEntity?> GetFileAsync(int id)
-        {
-            return await _context.Files.FindAsync(id);
         }
     }
 }

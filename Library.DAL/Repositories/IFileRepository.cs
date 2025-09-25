@@ -9,8 +9,9 @@ namespace Library.DAL.Repositories
 {
     public interface IFileRepository
     {
-        Task<FileEntity> AddFileAsync(FileEntity file);
-        Task<bool> DeleteFileAsync(int id);
+        Task<IEnumerable<FileEntity>> GetAllFilesAsync();
         Task<FileEntity?> GetFileAsync(int id);
+        Task AddFileAsync(FileEntity file);
+        Task<bool> DeleteFileAsync(int id);
     }
 }

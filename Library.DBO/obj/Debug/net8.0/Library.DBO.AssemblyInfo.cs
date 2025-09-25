@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Library.DBO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c92bd1ae2998ede981872defe8588e5ecc51e5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91c39ce0da5b5740b7414a019539f8b9fa785890")]
 [assembly: System.Reflection.AssemblyProductAttribute("Library.DBO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Library.DBO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
