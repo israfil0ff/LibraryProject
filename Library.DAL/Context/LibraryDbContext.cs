@@ -21,7 +21,7 @@ namespace Library.DAL.Context
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<FileEntity> Files { get; set; }
         public DbSet<UserFile> UserFiles { get; set; }
-        
+
 
 
 
@@ -50,7 +50,7 @@ namespace Library.DAL.Context
                         break;
 
                     case EntityState.Deleted:
-                        entry.State = EntityState.Modified; 
+                        entry.State = EntityState.Modified;
                         entity.IsDeleted = true;
                         entity.DeletedAt = DateTime.UtcNow;
                         break;
@@ -64,12 +64,12 @@ namespace Library.DAL.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            
+
             modelBuilder.Entity<BookRental>()
                 .Property(b => b.Price)
                 .HasColumnType("decimal(18,2)");
 
-            
+
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
                 if (typeof(AuditableEntity).IsAssignableFrom(entityType.ClrType))

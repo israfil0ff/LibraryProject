@@ -13,10 +13,10 @@ namespace Library.Entities
         public string FileName { get; set; }
         public string FilePath { get; set; }
 
-        
+
         public string OwnerUserId { get; set; }
 
-        
+
         public string UploadedByUserId { get; set; }
 
         public DateTime UploadedAt { get; set; } = DateTime.UtcNow;

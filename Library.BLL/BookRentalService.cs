@@ -21,7 +21,7 @@ public class BookRentalService : IBookRentalService
         _mapper = mapper;
     }
 
-  
+
     public PaginationResponse<BookRentalDto> GetAll(PaginationRequest request)
     {
         var query = _context.BookRentals

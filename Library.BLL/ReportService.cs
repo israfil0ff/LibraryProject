@@ -16,9 +16,9 @@ namespace Library.BLL
             _context = context;
         }
 
-        
+
         /// Ən çox icarəyə verilən kitabların siyahısı 
-       
+
         public IEnumerable<BookReportDto> GetMostRentedBooks(int top, BookReportFilterDto filter)
         {
             if (top <= 0)
@@ -131,9 +131,9 @@ namespace Library.BLL
             return result;
         }
 
-       
+
         /// Aylıq icarə statistikası 
-       
+
         public IEnumerable<MonthlyRentalStatDto> GetMonthlyRentalStats(MonthlyRentalFilterDto filter)
         {
             if (filter?.Year == null || filter.Year <= 0)

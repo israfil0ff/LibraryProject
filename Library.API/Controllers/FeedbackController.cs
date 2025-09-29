@@ -29,7 +29,7 @@ namespace Library.API.Controllers
             return Ok(new { Success = true, Message = "Feedback uğurla göndərildi." });
         }
 
-        
+
         [HttpGet("get-all")]
         public IActionResult GetAll([FromQuery] PaginationRequest request)
         {

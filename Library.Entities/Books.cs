@@ -11,12 +11,12 @@ public class Book : AuditableEntity
     public int AuthorId { get; set; }
 
     public int AvailableCount { get; set; }
-    public int RentedCount { get; set; } = 0; 
+    public int RentedCount { get; set; } = 0;
 
-    public int? CategoryId { get; set; }  
+    public int? CategoryId { get; set; }
     public virtual Category Category { get; set; }
 
-    [JsonIgnore] 
+    [JsonIgnore]
     public Author? Author { get; set; }
     public string? Description { get; set; }
 }

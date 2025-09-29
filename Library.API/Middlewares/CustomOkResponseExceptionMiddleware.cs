@@ -21,7 +21,7 @@ namespace Library.API.Middlewares
             }
             catch (Exception ex)
             {
-                
+
                 if (context.Request.Path.StartsWithSegments("/api/user") ||
                     context.Request.Path.StartsWithSegments("/api/bookrental"))
                 {
@@ -38,7 +38,7 @@ namespace Library.API.Middlewares
                 }
                 else
                 {
-                    throw; 
+                    throw;
                 }
             }
         }

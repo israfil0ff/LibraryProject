@@ -6,7 +6,7 @@ namespace Library.BLL.Interfaces
 {
     public interface ICategoryService
     {
-       
+
         PaginationResponse<CategoryDto> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null);
         PaginationResponse<CategoryWithBooksDto> GetAllWithBooks(PaginationRequest request, Dictionary<string, string>? filters = null);
 

@@ -18,7 +18,7 @@ public class CategoriesController : ControllerBase
         _service = service;
     }
 
-  
+
     [HttpGet("get-all")]
     public IActionResult GetAll([FromQuery] PaginationRequest request, [FromQuery] string? name)
     {
@@ -66,7 +66,7 @@ public class CategoriesController : ControllerBase
         return Ok(new { Success = true });
     }
 
-  
+
     [HttpGet("with-books")]
     public IActionResult GetAllWithBooks([FromQuery] PaginationRequest request, [FromQuery] string? name)
     {

@@ -6,7 +6,7 @@ namespace Library.BLL
 {
     public interface IAuthorService
     {
-        
+
         PaginationResponse<AuthorGetDTO> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null);
 
         AuthorGetDTO GetById(int id);

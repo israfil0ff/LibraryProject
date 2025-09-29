@@ -9,7 +9,7 @@ namespace Library.DBO
 {
     public class AdminUploadDTO
     {
-        public string TargetUserId { get; set; } 
+        public string TargetUserId { get; set; }
         public IFormFile File { get; set; }
     }
 }

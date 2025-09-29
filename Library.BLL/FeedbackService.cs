@@ -32,7 +32,7 @@ namespace Library.BLL
             _context.SaveChanges();
         }
 
-       
+
         public PaginationResponse<FeedbackGetDto> GetAll(PaginationRequest request)
         {
             var query = _context.Feedbacks.AsQueryable();

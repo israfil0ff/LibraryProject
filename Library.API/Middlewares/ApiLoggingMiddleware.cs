@@ -20,7 +20,7 @@ public class SimpleRequestLoggingMiddleware
         var method = request.Method;
         var path = request.Path;
 
-        
+
         context.Request.EnableBuffering();
 
         string requestBody = "";
@@ -37,7 +37,7 @@ public class SimpleRequestLoggingMiddleware
 
         var responseStatusCode = context.Response.StatusCode;
 
-        
+
         _logger.LogInformation(
             "HTTP {Method} {Path} responded {StatusCode} in {ElapsedMilliseconds}ms\nRequest Body: {RequestBody}",
             method,

@@ -7,7 +7,7 @@ namespace Library.DAL.Repositories
 {
     public interface IBookRepository
     {
-        
+
         IEnumerable<Book> GetAll(Dictionary<string, string>? filters = null);
         Book? GetById(int id);
         void Add(Book book);
@@ -17,7 +17,7 @@ namespace Library.DAL.Repositories
         IQueryable<Book> GetQueryable();
         void Save();
 
-        
+
         Task<IEnumerable<Book>> GetAllAsync();
     }
 }

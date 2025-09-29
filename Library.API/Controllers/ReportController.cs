@@ -16,9 +16,9 @@ namespace Library.API.Controllers
             _reportService = reportService;
         }
 
-        
+
         /// Ən çox icarəyə verilən kitabların siyahısı
-        
+
         [HttpPost("most-rented-books/{top?}")]
         public IActionResult GetMostRentedBooks(int top = 10, [FromBody] BookReportFilterDto filter = null)
         {
@@ -41,9 +41,9 @@ namespace Library.API.Controllers
             }
         }
 
-        
+
         /// Ən çox kitab götürən istifadəçilər
-        
+
         [HttpPost("top-users/{top?}")]
         public IActionResult GetTopUsers(int top = 10, [FromBody] UserReportFilterDto filter = null)
         {
@@ -66,9 +66,9 @@ namespace Library.API.Controllers
             }
         }
 
-        
+
         /// Gecikmiş kitabların siyahısı
-        
+
         [HttpPost("overdue-books")]
         public IActionResult GetOverdueBooks([FromBody] OverdueReportFilterDto filter = null)
         {
@@ -87,9 +87,9 @@ namespace Library.API.Controllers
             }
         }
 
-     
+
         /// Aylıq icarə statistikası
-       
+
         [HttpPost("monthly-stats")]
         public IActionResult GetMonthlyRentalStats([FromBody] MonthlyRentalFilterDto filter)
         {

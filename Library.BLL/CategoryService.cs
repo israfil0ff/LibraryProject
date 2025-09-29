@@ -74,14 +74,14 @@ namespace Library.BLL
             return true;
         }
 
-      
+
         public PaginationResponse<CategoryDto> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null)
         {
             var query = _context.Categories
                 .Where(c => !c.IsDeleted)
                 .AsQueryable();
 
-            
+
             if (filters != null)
             {
                 foreach (var filter in filters)
@@ -102,7 +102,7 @@ namespace Library.BLL
             return new PaginationResponse<CategoryDto>(items, totalCount, request.PageNumber, request.PageSize);
         }
 
-        
+
         public PaginationResponse<CategoryWithBooksDto> GetAllWithBooks(PaginationRequest request, Dictionary<string, string>? filters = null)
         {
             var query = _context.Categories

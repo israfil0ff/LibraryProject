@@ -8,7 +8,7 @@ namespace Library.DBO
 {
     public class UserRegisterDto
     {
-        public string Nick {  get; set; }
+        public string Nick { get; set; }
         public string Password { get; set; }
     }
 }

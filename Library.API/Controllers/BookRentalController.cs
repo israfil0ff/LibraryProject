@@ -18,7 +18,7 @@ namespace Library.API.Controllers
             _service = service;
         }
 
-        
+
         [HttpGet("get-all")]
         public IActionResult GetAll([FromQuery] PaginationRequest request)
         {

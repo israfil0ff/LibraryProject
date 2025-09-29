@@ -11,13 +11,13 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public IActionResult Login([FromForm] string userId, [FromForm] string role)
     {
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("S3cur3Sup3rL0ngJWTK3yForTest123456!")); 
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("S3cur3Sup3rL0ngJWTK3yForTest123456!"));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, userId),
-            new Claim(ClaimTypes.Role, role) 
+            new Claim(ClaimTypes.Role, role)
         };
 
         var token = new JwtSecurityToken(

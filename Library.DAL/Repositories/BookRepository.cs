@@ -75,7 +75,7 @@ namespace Library.DAL.Repositories
             _context.SaveChanges();
         }
 
-        
+
         public async Task<IEnumerable<Book>> GetAllAsync()
         {
             return await _context.Books

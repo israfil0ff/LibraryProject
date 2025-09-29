@@ -23,8 +23,8 @@ namespace Library.BLL
             CreateMap<Category, CategoryWithBooksDto>()
                 .ForMember(d => d.Books,
                     opt => opt.MapFrom(s => s.Books
-                        .Where(b => !b.IsDeleted)   
-                        .Select(b => b)             
+                        .Where(b => !b.IsDeleted)
+                        .Select(b => b)
                     ));
 
             CreateMap<Author, AuthorGetDTO>()
