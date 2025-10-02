@@ -10,6 +10,8 @@ using Library.BLL.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Library.DBO.HistoryDTOs;
+using System.Text.Json;
 
 namespace Library.BLL.Services
 {
@@ -17,11 +19,13 @@ namespace Library.BLL.Services
     {
         private readonly IBookRepository _bookRepository;
         private readonly IMapper _mapper;
+        private readonly IHistoryService _historyService; 
 
-        public BookService(IBookRepository bookRepository, IMapper mapper)
+        public BookService(IBookRepository bookRepository, IMapper mapper, IHistoryService historyService)
         {
             _bookRepository = bookRepository;
             _mapper = mapper;
+            _historyService = historyService; 
         }
 
         // =======================
@@ -81,6 +85,18 @@ namespace Library.BLL.Services
             _bookRepository.Add(book);
             _bookRepository.Save();
 
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "Book",
+                EntityId = book.Id,
+                Action = "Create",
+                NewValue = JsonSerializer.Serialize(book),
+                Status = "Success",
+                Message = $"Yeni kitab əlavə olundu: {book.Title}",
+                CreatedBy = "Admin"
+            });
+
             return book.Id;
         }
 
@@ -92,9 +108,25 @@ namespace Library.BLL.Services
             if (dto.CategoryId != null && !_bookRepository.CategoryExists(dto.CategoryId.Value))
                 throw new AppException(ErrorCode.CategoryNotFound);
 
+            
+            var oldValue = JsonSerializer.Serialize(book);
+
             _mapper.Map(dto, book);
             _bookRepository.Update(book);
             _bookRepository.Save();
+
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "Book",
+                EntityId = book.Id,
+                Action = "Update",
+                OldValue = oldValue,
+                NewValue = JsonSerializer.Serialize(book),
+                Status = "Success",
+                Message = $"Kitab yeniləndi: {book.Title}",
+                CreatedBy = "Admin"
+            });
 
             return book.Id;
         }
@@ -107,6 +139,18 @@ namespace Library.BLL.Services
             _bookRepository.Delete(book);
             _bookRepository.Save();
 
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "Book",
+                EntityId = id,
+                Action = "Delete",
+                OldValue = JsonSerializer.Serialize(book),
+                Status = "Success",
+                Message = $"Kitab silindi: {book.Title}",
+                CreatedBy = "Admin"
+            });
+
             return true;
         }
 
@@ -115,9 +159,24 @@ namespace Library.BLL.Services
             var book = _bookRepository.GetById(bookId)
                 ?? throw new AppException(ErrorCode.BookNotFound);
 
+            var oldValue = JsonSerializer.Serialize(book);
+
             book.AvailableCount += count;
             _bookRepository.Update(book);
             _bookRepository.Save();
+
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "Book",
+                EntityId = book.Id,
+                Action = "AddCount",
+                OldValue = oldValue,
+                NewValue = JsonSerializer.Serialize(book),
+                Status = "Success",
+                Message = $"Kitab sayısı artırıldı: {book.Title}, +{count}",
+                CreatedBy = "Admin"
+            });
 
             return true;
         }

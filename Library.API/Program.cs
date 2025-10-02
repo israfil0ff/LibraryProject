@@ -104,6 +104,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IFeedbackService, FeedbackService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
+builder.Services.AddScoped<IHistoryService, HistoryService>();
 
 builder.Services.AddProblemDetails();
 

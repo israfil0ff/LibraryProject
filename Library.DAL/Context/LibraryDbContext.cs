@@ -21,6 +21,7 @@ namespace Library.DAL.Context
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<FileEntity> Files { get; set; }
         public DbSet<UserFile> UserFiles { get; set; }
+        public DbSet<History> Histories { get; set; }
 
 
 
