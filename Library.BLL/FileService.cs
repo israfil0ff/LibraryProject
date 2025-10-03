@@ -3,6 +3,7 @@ using Library.DAL.Repositories;
 using Library.DBO.FileDTOs;
 using Microsoft.AspNetCore.Hosting;
 using Library.Entities;
+using Library.DBO.HistoryDTOs; 
 
 namespace Library.BLL.Services
 {
@@ -10,11 +11,13 @@ namespace Library.BLL.Services
     {
         private readonly IFileRepository _repository;
         private readonly IWebHostEnvironment _env;
+        private readonly IHistoryService _historyService; 
 
-        public FileService(IFileRepository repository, IWebHostEnvironment env)
+        public FileService(IFileRepository repository, IWebHostEnvironment env, IHistoryService historyService)
         {
             _repository = repository;
             _env = env;
+            _historyService = historyService;
         }
 
         public async Task<IEnumerable<FileDto>> GetAllAsync()
@@ -75,6 +78,19 @@ namespace Library.BLL.Services
 
             await _repository.AddFileAsync(entity);
 
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "File",
+                EntityId = entity.Id,
+                Action = "Upload",
+                OldValue = null,
+                NewValue = $"FileName: {entity.FileName}, Size: {entity.FileSize} bytes",
+                Status = "Success",
+                Message = "Yeni fayl uğurla yükləndi.",
+                CreatedBy = userId
+            });
+
             return new FileDto
             {
                 Id = entity.Id,
@@ -90,9 +106,10 @@ namespace Library.BLL.Services
         public async Task<bool> DeleteAsync(int id, string userId, bool isAdmin)
         {
             var file = await _repository.GetFileAsync(id);
-            if (file == null) return false;
+            if (file == null)
+                return false;
 
-            // user yalnız öz faylını silə bilər
+            
             if (!isAdmin && file.UserId != userId)
                 return false;
 
@@ -100,7 +117,22 @@ namespace Library.BLL.Services
             if (File.Exists(physicalPath))
                 File.Delete(physicalPath);
 
-            return await _repository.DeleteFileAsync(id);
+            var result = await _repository.DeleteFileAsync(id);
+
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "File",
+                EntityId = id,
+                Action = "Delete",
+                OldValue = $"FileName: {file.FileName}, Path: {file.FilePath}",
+                NewValue = null,
+                Status = result ? "Success" : "Failed",
+                Message = result ? "Fayl uğurla silindi." : "Fayl silinərkən xəta baş verdi.",
+                CreatedBy = userId
+            });
+
+            return result;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Library.DBO.HistoryDTOs
     public class HistoryCreateDTO
     {
         public string EntityName { get; set; }
-        public int? EntityId { get; set; }
+        public int EntityId { get; set; }
         public string Action { get; set; }
         public string? OldValue { get; set; }
         public string? NewValue { get; set; }

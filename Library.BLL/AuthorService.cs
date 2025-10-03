@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Library.BLL.Exceptions;
 using Library.Entities.Enums;
 using Library.BLL.Interfaces;
+using Library.DBO.HistoryDTOs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,11 +19,13 @@ public class AuthorService : IAuthorService
 {
     private readonly LibraryDbContext _context;
     private readonly IMapper _mapper;
+    private readonly IHistoryService _historyService;
 
-    public AuthorService(LibraryDbContext context, IMapper mapper)
+    public AuthorService(LibraryDbContext context, IMapper mapper, IHistoryService historyService)
     {
         _context = context;
         _mapper = mapper;
+        _historyService = historyService;
     }
 
     // ============================
@@ -55,8 +58,8 @@ public class AuthorService : IAuthorService
                 Name = a.Name,
                 isDeleted = a.IsDeleted,
                 BookTitles = a.Books.Count > 0
-    ? a.Books.Where(b => !b.IsDeleted).Select(b => b.Title).ToList()
-    : new List<string>()
+                    ? a.Books.Where(b => !b.IsDeleted).Select(b => b.Title).ToList()
+                    : new List<string>()
             })
             .ToList();
 
@@ -77,8 +80,8 @@ public class AuthorService : IAuthorService
                 Name = a.Name,
                 isDeleted = a.IsDeleted,
                 BookTitles = a.Books.Count > 0
-    ? a.Books.Where(b => !b.IsDeleted).Select(b => b.Title).ToList()
-    : new List<string>()
+                    ? a.Books.Where(b => !b.IsDeleted).Select(b => b.Title).ToList()
+                    : new List<string>()
             })
             .FirstOrDefault();
 
@@ -104,6 +107,18 @@ public class AuthorService : IAuthorService
         _context.Authors.Add(author);
         _context.SaveChanges();
 
+       
+        _historyService.AddHistory(new HistoryCreateDTO
+        {
+            EntityName = nameof(Author),
+            EntityId = author.Id,
+            Action = "Create",
+            Status = "Success",
+            Message = $"Author '{author.Name}' created.",
+            NewValue = $"Name: {author.Name}",
+            CreatedBy = "System" 
+        });
+
         return author.Id;
     }
 
@@ -115,8 +130,23 @@ public class AuthorService : IAuthorService
         var author = _context.Authors.FirstOrDefault(a => a.Id == authorDto.Id && !a.IsDeleted)
             ?? throw new AppException(ErrorCode.AuthorNotFound);
 
+        var oldName = author.Name;
+
         author.Name = authorDto.Name;
         _context.SaveChanges();
+
+        
+        _historyService.AddHistory(new HistoryCreateDTO
+        {
+            EntityName = nameof(Author),
+            EntityId = author.Id,
+            Action = "Update",
+            Status = "Success",
+            Message = $"Author '{oldName}' updated to '{author.Name}'.",
+            OldValue = $"Name: {oldName}",
+            NewValue = $"Name: {author.Name}",
+            CreatedBy = "System"
+        });
 
         return author.Id;
     }
@@ -132,11 +162,23 @@ public class AuthorService : IAuthorService
         author.IsDeleted = true;
         _context.SaveChanges();
 
+        
+        _historyService.AddHistory(new HistoryCreateDTO
+        {
+            EntityName = nameof(Author),
+            EntityId = author.Id,
+            Action = "Delete",
+            Status = "Success",
+            Message = $"Author '{author.Name}' deleted.",
+            OldValue = $"Name: {author.Name}",
+            CreatedBy = "System"
+        });
+
         return true;
     }
 
     // ============================
-    // 🔹 AI üçün async metod
+    // 🔹 Async metod
     // ============================
     public async Task<IEnumerable<AuthorGetDTO>> GetAllAuthorsAsync()
     {

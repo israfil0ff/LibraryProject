@@ -1,5 +1,7 @@
 ﻿using Library.DAL.Context;
 using Library.DBO.Reports;
+using Library.DBO.HistoryDTOs;
+using Library.BLL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,156 +12,234 @@ namespace Library.BLL
     public class ReportService : IReportService
     {
         private readonly LibraryDbContext _context;
+        private readonly IHistoryService _historyService;
 
-        public ReportService(LibraryDbContext context)
+        public ReportService(LibraryDbContext context, IHistoryService historyService)
         {
             _context = context;
+            _historyService = historyService;
         }
 
-
-        /// Ən çox icarəyə verilən kitabların siyahısı 
-
+        /// Ən çox icarəyə verilən kitabların siyahısı
         public IEnumerable<BookReportDto> GetMostRentedBooks(int top, BookReportFilterDto filter)
         {
-            if (top <= 0)
-                throw new ArgumentException("Top parametri 0-dan böyük olmalıdır.");
+            try
+            {
+                if (top <= 0)
+                    throw new ArgumentException("Top parametri 0-dan böyük olmalıdır.");
 
-            var query = _context.BookRentals
-                .Include(r => r.Book)
-                .ThenInclude(b => b.Author)
-                .AsQueryable();
+                var query = _context.BookRentals
+                    .Include(r => r.Book)
+                    .ThenInclude(b => b.Author)
+                    .AsQueryable();
 
-            if (filter?.StartDate != null)
-                query = query.Where(r => r.StartDate >= filter.StartDate);
+                if (filter?.StartDate != null)
+                    query = query.Where(r => r.StartDate >= filter.StartDate);
 
-            if (filter?.EndDate != null)
-                query = query.Where(r => r.StartDate <= filter.EndDate);
+                if (filter?.EndDate != null)
+                    query = query.Where(r => r.StartDate <= filter.EndDate);
 
-            if (filter?.AuthorId != null)
-                query = query.Where(r => r.Book.AuthorId == filter.AuthorId);
+                if (filter?.AuthorId != null)
+                    query = query.Where(r => r.Book.AuthorId == filter.AuthorId);
 
-            if (filter?.CategoryId != null)
-                query = query.Where(r => r.Book.CategoryId == filter.CategoryId);
+                if (filter?.CategoryId != null)
+                    query = query.Where(r => r.Book.CategoryId == filter.CategoryId);
 
-            var result = query
-                .GroupBy(r => r.BookId)
-                .Select(g => new BookReportDto
+                var result = query
+                    .GroupBy(r => r.BookId)
+                    .Select(g => new BookReportDto
+                    {
+                        BookId = g.Key,
+                        Title = g.FirstOrDefault().Book.Title,
+                        RentalCount = g.Count()
+                    })
+                    .OrderByDescending(x => x.RentalCount)
+                    .Take(top)
+                    .ToList();
+
+                _historyService.AddHistory(new HistoryCreateDTO
                 {
-                    BookId = g.Key,
-                    Title = g.FirstOrDefault().Book.Title,
-                    RentalCount = g.Count()
-                })
-                .OrderByDescending(x => x.RentalCount)
-                .Take(top)
-                .ToList();
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetMostRentedBooks",
+                    Status = "Success",
+                    Message = $"Top {top} rented books report generated."
+                });
 
-            if (!result.Any())
-                throw new InvalidOperationException("Ən çox icarəyə verilən kitab tapılmadı.");
-
-            return result;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _historyService.AddHistory(new HistoryCreateDTO
+                {
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetMostRentedBooks",
+                    Status = "Error",
+                    Message = ex.Message
+                });
+                throw;
+            }
         }
 
-
-        /// Ən çox kitab götürən istifadəçilər 
-
+        /// Ən çox kitab götürən istifadəçilər
         public IEnumerable<UserReportDto> GetTopUsers(int top, UserReportFilterDto filter)
         {
-            if (top <= 0)
-                throw new ArgumentException("Top parametri 0-dan böyük olmalıdır.");
+            try
+            {
+                if (top <= 0)
+                    throw new ArgumentException("Top parametri 0-dan böyük olmalıdır.");
 
-            var query = _context.BookRentals
-                .Include(r => r.User)
-                .AsQueryable();
+                var query = _context.BookRentals
+                    .Include(r => r.User)
+                    .AsQueryable();
 
-            if (filter?.StartDate != null)
-                query = query.Where(r => r.StartDate >= filter.StartDate);
+                if (filter?.StartDate != null)
+                    query = query.Where(r => r.StartDate >= filter.StartDate);
 
-            if (filter?.EndDate != null)
-                query = query.Where(r => r.StartDate <= filter.EndDate);
+                if (filter?.EndDate != null)
+                    query = query.Where(r => r.StartDate <= filter.EndDate);
 
-            var result = query
-                .GroupBy(r => r.UserId)
-                .Select(g => new UserReportDto
+                var result = query
+                    .GroupBy(r => r.UserId)
+                    .Select(g => new UserReportDto
+                    {
+                        UserId = g.Key,
+                        FullName = g.FirstOrDefault().User.Nick,
+                        TotalRentals = g.Count()
+                    })
+                    .OrderByDescending(x => x.TotalRentals)
+                    .Take(top)
+                    .ToList();
+
+                _historyService.AddHistory(new HistoryCreateDTO
                 {
-                    UserId = g.Key,
-                    FullName = g.FirstOrDefault().User.Nick,
-                    TotalRentals = g.Count()
-                })
-                .OrderByDescending(x => x.TotalRentals)
-                .Take(top)
-                .ToList();
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetTopUsers",
+                    Status = "Success",
+                    Message = $"Top {top} users report generated."
+                });
 
-            if (!result.Any())
-                throw new InvalidOperationException("İstifadəçi tapılmadı.");
-
-            return result;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _historyService.AddHistory(new HistoryCreateDTO
+                {
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetTopUsers",
+                    Status = "Error",
+                    Message = ex.Message
+                });
+                throw;
+            }
         }
 
-
-        /// Gecikmiş kitabların siyahısı 
-
+        /// Gecikmiş kitabların siyahısı
         public IEnumerable<OverdueReportDto> GetOverdueBooks(OverdueReportFilterDto filter)
         {
-            var today = DateTime.UtcNow;
+            try
+            {
+                var today = DateTime.UtcNow;
 
-            var query = _context.BookRentals
-                .Include(r => r.Book)
-                .Include(r => r.User)
-                .Where(r => r.EndDate < today && r.ReturnDate == null)
-                .AsQueryable();
+                var query = _context.BookRentals
+                    .Include(r => r.Book)
+                    .Include(r => r.User)
+                    .Where(r => r.EndDate < today && r.ReturnDate == null)
+                    .AsQueryable();
 
-            if (filter?.UserId != null)
-                query = query.Where(r => r.UserId == filter.UserId);
+                if (filter?.UserId != null)
+                    query = query.Where(r => r.UserId == filter.UserId);
 
-            if (filter?.DueBefore != null)
-                query = query.Where(r => r.EndDate <= filter.DueBefore);
+                if (filter?.DueBefore != null)
+                    query = query.Where(r => r.EndDate <= filter.DueBefore);
 
-            var result = query
-                .Select(r => new OverdueReportDto
+                var result = query
+                    .Select(r => new OverdueReportDto
+                    {
+                        RentalId = r.Id,
+                        BookTitle = r.Book.Title,
+                        UserFullName = r.User.Nick,
+                        DueDate = r.EndDate,
+                        DaysOverdue = EF.Functions.DateDiffDay(r.EndDate, today)
+                    })
+                    .ToList();
+
+                _historyService.AddHistory(new HistoryCreateDTO
                 {
-                    RentalId = r.Id,
-                    BookTitle = r.Book.Title,
-                    UserFullName = r.User.Nick,
-                    DueDate = r.EndDate,
-                    DaysOverdue = EF.Functions.DateDiffDay(r.EndDate, today)
-                })
-                .ToList();
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetOverdueBooks",
+                    Status = "Success",
+                    Message = "Overdue books report generated."
+                });
 
-            if (!result.Any())
-                throw new InvalidOperationException("Hazırda gecikmiş kitab yoxdur.");
-
-            return result;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _historyService.AddHistory(new HistoryCreateDTO
+                {
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetOverdueBooks",
+                    Status = "Error",
+                    Message = ex.Message
+                });
+                throw;
+            }
         }
 
-
-        /// Aylıq icarə statistikası 
-
+        /// Aylıq icarə statistikası
         public IEnumerable<MonthlyRentalStatDto> GetMonthlyRentalStats(MonthlyRentalFilterDto filter)
         {
-            if (filter?.Year == null || filter.Year <= 0)
-                throw new ArgumentException("İl düzgün daxil edilməyib.");
+            try
+            {
+                if (filter?.Year == null || filter.Year <= 0)
+                    throw new ArgumentException("İl düzgün daxil edilməyib.");
 
-            var query = _context.BookRentals
-                .Where(r => r.StartDate.Year == filter.Year)
-                .AsQueryable();
+                var query = _context.BookRentals
+                    .Where(r => r.StartDate.Year == filter.Year)
+                    .AsQueryable();
 
-            if (filter.Month != null)
-                query = query.Where(r => r.StartDate.Month == filter.Month);
+                if (filter.Month != null)
+                    query = query.Where(r => r.StartDate.Month == filter.Month);
 
-            var result = query
-                .GroupBy(r => r.StartDate.Month)
-                .Select(g => new MonthlyRentalStatDto
+                var result = query
+                    .GroupBy(r => r.StartDate.Month)
+                    .Select(g => new MonthlyRentalStatDto
+                    {
+                        Month = g.Key,
+                        TotalRentals = g.Count()
+                    })
+                    .OrderBy(x => x.Month)
+                    .ToList();
+
+                _historyService.AddHistory(new HistoryCreateDTO
                 {
-                    Month = g.Key,
-                    TotalRentals = g.Count()
-                })
-                .OrderBy(x => x.Month)
-                .ToList();
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetMonthlyRentalStats",
+                    Status = "Success",
+                    Message = $"Monthly rental stats generated for {filter.Year}."
+                });
 
-            if (!result.Any())
-                throw new InvalidOperationException($"{filter.Year}-ci il üçün statistik məlumat tapılmadı.");
-
-            return result;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _historyService.AddHistory(new HistoryCreateDTO
+                {
+                    EntityName = "Report",
+                    EntityId = 0,
+                    Action = "GetMonthlyRentalStats",
+                    Status = "Error",
+                    Message = ex.Message
+                });
+                throw;
+            }
         }
     }
 }

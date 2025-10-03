@@ -21,7 +21,19 @@ namespace Library.BLL.Services
 
         public void AddHistory(HistoryCreateDTO dto)
         {
-            var entity = _mapper.Map<History>(dto);
+            var entity = new History
+            {
+                EntityName = dto.EntityName,
+                EntityId = dto.EntityId,
+                Action = dto.Action,
+                OldValue = dto.OldValue,
+                NewValue = dto.NewValue,
+                Status = dto.Status,
+                Message = dto.Message,
+                CreatedBy = dto.CreatedBy,
+                CreatedAt = System.DateTime.UtcNow
+            };
+
             _historyRepository.Add(entity);
             _historyRepository.Save();
         }
@@ -40,7 +52,7 @@ namespace Library.BLL.Services
 
             return _mapper.Map<HistoryReadDTO>(entity);
         }
-
+    
         public IEnumerable<HistoryReadDTO> GetByEntity(string entityName, int entityId)
         {
             var list = _historyRepository

@@ -7,6 +7,8 @@ using Library.Entities;
 using Library.Entities.Enums;
 using Library.BLL.Exceptions;
 using Microsoft.EntityFrameworkCore;
+using Library.BLL.Interfaces;
+using Library.DBO.HistoryDTOs;
 
 namespace Library.BLL;
 
@@ -14,13 +16,14 @@ public class BookRentalService : IBookRentalService
 {
     private readonly LibraryDbContext _context;
     private readonly IMapper _mapper;
+    private readonly IHistoryService _historyService;
 
-    public BookRentalService(LibraryDbContext context, IMapper mapper)
+    public BookRentalService(LibraryDbContext context, IMapper mapper, IHistoryService historyService)
     {
         _context = context;
         _mapper = mapper;
+        _historyService = historyService;
     }
-
 
     public PaginationResponse<BookRentalDto> GetAll(PaginationRequest request)
     {
@@ -97,6 +100,19 @@ public class BookRentalService : IBookRentalService
         _context.BookRentals.Add(rental);
         _context.SaveChanges();
 
+        
+        _historyService.AddHistory(new HistoryCreateDTO
+        {
+            EntityName = "BookRental",
+            EntityId = rental.Id,
+            Action = "Create",
+            OldValue = null,
+            NewValue = $"User '{user.Nick}' kitab '{book.Title}' kirayə götürdü.",
+            Status = "Success",
+            Message = "Kitab kirayə götürüldü",
+            CreatedBy = user.Nick
+        });
+
         var rentalDto = _mapper.Map<BookRentalDto>(rental);
         rentalDto.DurationText = durationText;
 
@@ -127,6 +143,19 @@ public class BookRentalService : IBookRentalService
         rental.Book.RentedCount--;
 
         _context.SaveChanges();
+
+        
+        _historyService.AddHistory(new HistoryCreateDTO
+        {
+            EntityName = "BookRental",
+            EntityId = rental.Id,
+            Action = "Return",
+            OldValue = null,
+            NewValue = $"User '{user.Nick}' kitab '{rental.Book.Title}' qaytardı.",
+            Status = "Success",
+            Message = "Kitab uğurla qaytarıldı.",
+            CreatedBy = user.Nick
+        });
 
         return "Kitab uğurla qaytarıldı.";
     }

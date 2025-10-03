@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Library.BLL.Exceptions;
-using Library.BLL.Helpers;
 using Library.BLL.Interfaces;
 using Library.DAL.Context;
 using Library.DBO;
+using Library.DBO.HistoryDTOs; 
 using Library.DBO.Pagination;
 using Library.Entities;
 using Library.Entities.Enums;
@@ -19,11 +19,13 @@ namespace Library.BLL
     {
         private readonly LibraryDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IHistoryService _historyService; 
 
-        public CategoryService(LibraryDbContext context, IMapper mapper)
+        public CategoryService(LibraryDbContext context, IMapper mapper, IHistoryService historyService)
         {
             _context = context;
             _mapper = mapper;
+            _historyService = historyService;
         }
 
         public int Add(CategoryCreateDto dto)
@@ -38,6 +40,19 @@ namespace Library.BLL
             _context.Categories.Add(category);
             _context.SaveChanges();
 
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "Category",
+                EntityId = category.Id,
+                Action = "Create",
+                OldValue = null,
+                NewValue = $"Name: {category.Name}",
+                Status = "Success",
+                Message = "Yeni kateqoriya əlavə olundu",
+                CreatedBy = "System"
+            });
+
             return category.Id;
         }
 
@@ -49,8 +64,23 @@ namespace Library.BLL
             if (_context.Categories.Any(c => c.Name == dto.Name && c.Id != dto.Id && !c.IsDeleted))
                 throw new AppException(ErrorCode.InvalidCategoryInput);
 
+            var oldValue = $"Name: {category.Name}";
+
             category.Name = dto.Name;
             _context.SaveChanges();
+
+            
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "Category",
+                EntityId = category.Id,
+                Action = "Update",
+                OldValue = oldValue,
+                NewValue = $"Name: {category.Name}",
+                Status = "Success",
+                Message = "Kateqoriya yeniləndi",
+                CreatedBy = "System"
+            });
 
             return category.Id;
         }
@@ -62,6 +92,8 @@ namespace Library.BLL
                 .FirstOrDefault(c => c.Id == id && !c.IsDeleted)
                 ?? throw new AppException(ErrorCode.CategoryNotFound);
 
+            string oldValue = $"Name: {category.Name}, BookCount: {category.Books?.Count ?? 0}";
+
             if (category.Books != null)
             {
                 foreach (var book in category.Books)
@@ -71,16 +103,27 @@ namespace Library.BLL
             category.IsDeleted = true;
             _context.SaveChanges();
 
+          
+            _historyService.AddHistory(new HistoryCreateDTO
+            {
+                EntityName = "Category",
+                EntityId = category.Id,
+                Action = "Delete",
+                OldValue = oldValue,
+                NewValue = null,
+                Status = "Success",
+                Message = "Kateqoriya silindi",
+                CreatedBy = "System"
+            });
+
             return true;
         }
-
 
         public PaginationResponse<CategoryDto> GetAll(PaginationRequest request, Dictionary<string, string>? filters = null)
         {
             var query = _context.Categories
                 .Where(c => !c.IsDeleted)
                 .AsQueryable();
-
 
             if (filters != null)
             {
@@ -101,7 +144,6 @@ namespace Library.BLL
 
             return new PaginationResponse<CategoryDto>(items, totalCount, request.PageNumber, request.PageSize);
         }
-
 
         public PaginationResponse<CategoryWithBooksDto> GetAllWithBooks(PaginationRequest request, Dictionary<string, string>? filters = null)
         {

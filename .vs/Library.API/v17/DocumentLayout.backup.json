@@ -3,16 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dal\\context\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|solutionrelative:library.dal\\context\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\bookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\bookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\interfaces\\ibookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\ibookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\bookrentalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\bookrentalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.api\\controllers\\bookrentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\controllers\\bookrentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\historyreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\historyreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\historycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\historycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\mapper\\historyprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\mapper\\historyprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.api\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,32 +83,8 @@
       "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\ihistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\historyreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\historyreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dal\\context\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|solutionrelative:library.dal\\context\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|solutionrelative:library.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\historycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\historycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dal\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{86F7B800-73AA-47F7-B5EE-B760552421F4}|Solution Items{86F7B800-73AA-47F7-B5EE-B760552421F4}|solutionrelative:.editorconfig||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.api\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -97,10 +129,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.api\\library.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\library.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dal\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,10 +187,6 @@
       "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\authorgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\authorgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -185,10 +209,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\bookgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\bookgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7720024B-D101-429A-AE2B-05CD866631B0}|Library.Entities\\Library.Entities.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.entities\\bookrental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -223,10 +243,6 @@
       "RelativeMoniker": "D:0:0:{7720024B-D101-429A-AE2B-05CD866631B0}|Library.Entities\\Library.Entities.csproj|solutionrelative:library.entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\interfaces\\ibookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\ibookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\reports\\monthlyrentalstatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\reports\\monthlyrentalstatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -251,20 +267,8 @@
       "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\bookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\bookrentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.bll\\interfaces\\ifeedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{909D918F-72D3-4037-8A45-9E7EE3B08293}|Library.BLL\\Library.BLL.csproj|solutionrelative:library.bll\\interfaces\\ifeedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.api\\controllers\\bookrentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0ADD615-E138-45DF-BD3B-699446C6134B}|Library.API\\Library.API.csproj|solutionrelative:library.api\\controllers\\bookrentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADEE79D7-AA33-41EE-B343-7DFE4D81DE44}|Library.DAL\\Library.DAL.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dal\\extensions\\queryableextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -332,10 +336,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\bookrentaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\bookrentaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\bookrentalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|solutionrelative:library.dbo\\bookrentalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5533486-5F96-4E13-A1E8-E11CD507CEF6}|Library.DBO\\Library.DBO.csproj|c:\\users\\volunteer12\\desktop\\omer\u0027s folder\\libraryproject-master\\library.dbo\\validators\\bookupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -429,7 +429,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -441,20 +441,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HistoryProfile.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Mapper\\HistoryProfile.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\Mapper\\HistoryProfile.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Mapper\\HistoryProfile.cs*",
-              "RelativeToolTip": "Library.BLL\\Mapper\\HistoryProfile.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BookRentalService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\BookRentalService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\BookRentalService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\BookRentalService.cs*",
+              "RelativeToolTip": "Library.BLL\\BookRentalService.cs*",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T12:51:58.132Z",
+              "WhenOpened": "2025-08-12T06:59:12.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FileService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\FileService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FileService.cs",
+              "RelativeToolTip": "Library.BLL\\FileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T13:02:26.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookRentalController.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\BookRentalController.cs",
+              "RelativeDocumentMoniker": "Library.API\\Controllers\\BookRentalController.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\BookRentalController.cs",
+              "RelativeToolTip": "Library.API\\Controllers\\BookRentalController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T07:46:59.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookRentalCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\BookRentalCreateDto.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\BookRentalCreateDto.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\BookRentalCreateDto.cs",
+              "RelativeToolTip": "Library.DBO\\BookRentalCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:23:13.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\CategoryService.cs",
+              "RelativeToolTip": "Library.BLL\\CategoryService.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAmwAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:21:37.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HistoryService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\HistoryService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\HistoryService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\HistoryService.cs*",
+              "RelativeToolTip": "Library.BLL\\HistoryService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T12:38:18.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Program.cs",
+              "RelativeDocumentMoniker": "Library.API\\Program.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Program.cs",
+              "RelativeToolTip": "Library.API\\Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAADwv2sAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T07:50:23.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "Library.BLL\\Interfaces\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T08:04:06.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IBookRentalService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookRentalService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IBookRentalService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookRentalService.cs",
+              "RelativeToolTip": "Library.BLL\\Interfaces\\IBookRentalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T08:04:01.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LibraryDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Context\\LibraryDbContext.cs",
+              "RelativeDocumentMoniker": "Library.DAL\\Context\\LibraryDbContext.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Context\\LibraryDbContext.cs",
+              "RelativeToolTip": "Library.DAL\\Context\\LibraryDbContext.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:27:07.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FeedbackService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FeedbackService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\FeedbackService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FeedbackService.cs",
+              "RelativeToolTip": "Library.BLL\\FeedbackService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T12:05:44.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "HistoryReadDTO.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\HistoryReadDTO.cs",
               "RelativeDocumentMoniker": "Library.DBO\\HistoryReadDTO.cs",
@@ -467,46 +597,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
+              "Title": "AuthorService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\AuthorService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\AuthorService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\AuthorService.cs",
+              "RelativeToolTip": "Library.BLL\\AuthorService.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAowHYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T09:35:09.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HistoryCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\HistoryCreateDTO.cs",
+              "RelativeDocumentMoniker": "Library.DBO\\HistoryCreateDTO.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\HistoryCreateDTO.cs",
+              "RelativeToolTip": "Library.DBO\\HistoryCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T12:38:56.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\BookService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\BookService.cs",
               "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\BookService.cs",
               "RelativeToolTip": "Library.BLL\\BookService.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAAgwKcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAgwKcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-13T07:46:02.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LibraryDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Context\\LibraryDbContext.cs",
-              "RelativeDocumentMoniker": "Library.DAL\\Context\\LibraryDbContext.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Context\\LibraryDbContext.cs",
-              "RelativeToolTip": "Library.DAL\\Context\\LibraryDbContext.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowBcAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\ReportService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\ReportService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\ReportService.cs",
+              "RelativeToolTip": "Library.BLL\\ReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T09:27:07.735Z",
+              "WhenOpened": "2025-09-01T12:33:54.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HistoryController.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\HistoryController.cs",
-              "RelativeDocumentMoniker": "Library.API\\Controllers\\HistoryController.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\HistoryController.cs",
-              "RelativeToolTip": "Library.API\\Controllers\\HistoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "HistoryProfile.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Mapper\\HistoryProfile.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\Mapper\\HistoryProfile.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Mapper\\HistoryProfile.cs",
+              "RelativeToolTip": "Library.BLL\\Mapper\\HistoryProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T12:41:24.213Z",
+              "WhenOpened": "2025-10-02T12:51:58.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
+              "Title": "IHistoryService.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IHistoryService.cs",
+              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IHistoryService.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IHistoryService.cs",
+              "RelativeToolTip": "Library.BLL\\Interfaces\\IHistoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T12:37:42.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "IHistoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\IHistoryRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\IHistoryRepository.cs",
@@ -518,57 +686,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IHistoryService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IHistoryService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IHistoryService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IHistoryService.cs",
-              "RelativeToolTip": "Library.BLL\\Interfaces\\IHistoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "HistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\HistoryController.cs",
+              "RelativeDocumentMoniker": "Library.API\\Controllers\\HistoryController.cs",
+              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\HistoryController.cs",
+              "RelativeToolTip": "Library.API\\Controllers\\HistoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T12:37:42.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T12:41:24.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HistoryService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\HistoryService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\HistoryService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\HistoryService.cs",
-              "RelativeToolTip": "Library.BLL\\HistoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T12:38:18.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\CategoryService.cs",
-              "RelativeToolTip": "Library.BLL\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T09:21:37.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Program.cs",
-              "RelativeDocumentMoniker": "Library.API\\Program.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Program.cs",
-              "RelativeToolTip": "Library.API\\Program.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAADwv2sAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T07:50:23.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 17,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Mapper\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Mapper\\MappingProfile.cs",
@@ -576,24 +706,11 @@
               "RelativeToolTip": "Library.BLL\\Mapper\\MappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T08:25:55.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T08:25:55.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HistoryCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\HistoryCreateDTO.cs",
-              "RelativeDocumentMoniker": "Library.DBO\\HistoryCreateDTO.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\HistoryCreateDTO.cs",
-              "RelativeToolTip": "Library.DBO\\HistoryCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T12:38:56.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\IGenericRepository.cs",
@@ -605,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\GenericRepository.cs",
@@ -617,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "HistoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\HistoryRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\HistoryRepository.cs",
@@ -629,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "History.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\History.cs",
               "RelativeDocumentMoniker": "Library.Entities\\History.cs",
@@ -641,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\AuthController.cs",
@@ -653,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": ".editorconfig",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\.editorconfig",
               "RelativeDocumentMoniker": ".editorconfig",
@@ -665,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "Library.API.csproj",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Library.API.csproj",
               "RelativeDocumentMoniker": "Library.API\\Library.API.csproj",
@@ -677,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "GlobalExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
               "RelativeDocumentMoniker": "Library.API\\Global Exception Handler\\GlobalExceptionHandler.cs",
@@ -689,19 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FileService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FileService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\FileService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FileService.cs",
-              "RelativeToolTip": "Library.BLL\\FileService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T13:02:26.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "FileController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\FileController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\FileController.cs",
@@ -713,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "FileRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\FileRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\FileRepository.cs",
@@ -725,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "FeedbackController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\FeedbackController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\FeedbackController.cs",
@@ -737,19 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ReportService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\ReportService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\ReportService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\ReportService.cs",
-              "RelativeToolTip": "Library.BLL\\ReportService.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwF8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T12:33:54.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\appsettings.json",
               "RelativeDocumentMoniker": "Library.API\\appsettings.json",
@@ -761,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "FileUploadDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\FileUploadDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\FileUploadDto.cs",
@@ -773,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "IFileRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\IFileRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\IFileRepository.cs",
@@ -785,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "FileEntity.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\FileEntity.cs",
               "RelativeDocumentMoniker": "Library.Entities\\FileEntity.cs",
@@ -797,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "IFileService.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IFileService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IFileService.cs",
@@ -809,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "FileDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\FileDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\FileDto.cs",
@@ -821,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "FileUploadValidator.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Validators\\FileUploadValidator.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Validators\\FileUploadValidator.cs",
@@ -833,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "AdminUploadValidator.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Validators\\AdminUploadValidator.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Validators\\AdminUploadValidator.cs",
@@ -845,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "AdminUploadDTO.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\AdminUploadDTO.cs",
               "RelativeDocumentMoniker": "Library.DBO\\AdminUploadDTO.cs",
@@ -857,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "UserFile.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\UserFile.cs",
               "RelativeDocumentMoniker": "Library.Entities\\UserFile.cs",
@@ -869,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "UserLoginDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\UserLoginDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\UserLoginDto.cs",
@@ -881,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Library.API\\Properties\\launchSettings.json",
@@ -893,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "AuthorController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\AuthorController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\AuthorController.cs",
@@ -905,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 48,
               "Title": "Books.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\Books.cs",
               "RelativeDocumentMoniker": "Library.Entities\\Books.cs",
@@ -917,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "ReportController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\ReportController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\ReportController.cs",
@@ -929,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 50,
               "Title": "IBookRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\IBookRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\IBookRepository.cs",
@@ -941,19 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "AuthorService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\AuthorService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\AuthorService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\AuthorService.cs",
-              "RelativeToolTip": "Library.BLL\\AuthorService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwFAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T09:35:09.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 47,
               "Title": "IAuthorService.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IAuthorService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IAuthorService.cs",
@@ -965,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 51,
               "Title": "BookGetDTO.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\BookGetDTO.cs",
               "RelativeDocumentMoniker": "Library.DBO\\BookGetDTO.cs",
@@ -977,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 49,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Repositories\\BookRepository.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Repositories\\BookRepository.cs",
@@ -990,18 +1071,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 46,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IBookService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookService.cs",
-              "RelativeToolTip": "Library.BLL\\Interfaces\\IBookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T08:04:06.905Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
               "Title": "AuthorGetDTO.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\AuthorGetDTO.cs",
               "RelativeDocumentMoniker": "Library.DBO\\AuthorGetDTO.cs",
@@ -1013,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "IReportService.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IReportService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IReportService.cs",
@@ -1025,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "UserReportDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\UserReportDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\UserReportDto.cs",
@@ -1037,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "BookReportFilterDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\BookReportFilterDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\BookReportFilterDto.cs",
@@ -1049,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "UserReportFilterDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\UserReportFilterDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\UserReportFilterDto.cs",
@@ -1061,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "BookRental.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\BookRental.cs",
               "RelativeDocumentMoniker": "Library.Entities\\BookRental.cs",
@@ -1073,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 57,
               "Title": "OverdueReportFilterDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\OverdueReportFilterDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\OverdueReportFilterDto.cs",
@@ -1085,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "MonthlyRentalFilterDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\MonthlyRentalFilterDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\MonthlyRentalFilterDto.cs",
@@ -1097,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "BookReportDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\BookReportDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\BookReportDto.cs",
@@ -1109,7 +1178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "OverdueReportDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\OverdueReportDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\OverdueReportDto.cs",
@@ -1121,7 +1190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "MonthlyRentalStatDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Reports\\MonthlyRentalStatDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Reports\\MonthlyRentalStatDto.cs",
@@ -1133,19 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "IBookRentalService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookRentalService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IBookRentalService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IBookRentalService.cs",
-              "RelativeToolTip": "Library.BLL\\Interfaces\\IBookRentalService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T08:04:01.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\User.cs",
               "RelativeDocumentMoniker": "Library.Entities\\User.cs",
@@ -1157,7 +1214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\CategoryController.cs",
@@ -1169,7 +1226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 66,
               "Title": "IFeedbackService.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\IFeedbackService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\IFeedbackService.cs",
@@ -1181,7 +1238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\BookController.cs",
@@ -1193,31 +1250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "FeedbackService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FeedbackService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\FeedbackService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\FeedbackService.cs",
-              "RelativeToolTip": "Library.BLL\\FeedbackService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T12:05:44.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "BookRentalService.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\BookRentalService.cs",
-              "RelativeDocumentMoniker": "Library.BLL\\BookRentalService.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\BookRentalService.cs",
-              "RelativeToolTip": "Library.BLL\\BookRentalService.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAIwBcAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T06:59:12.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Interfaces\\ICategoryService.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Interfaces\\ICategoryService.cs",
@@ -1229,19 +1262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "BookRentalController.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\BookRentalController.cs",
-              "RelativeDocumentMoniker": "Library.API\\Controllers\\BookRentalController.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\BookRentalController.cs",
-              "RelativeToolTip": "Library.API\\Controllers\\BookRentalController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T07:46:59.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "QueryableExtensions.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Extensions\\QueryableExtensions.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Extensions\\QueryableExtensions.cs",
@@ -1253,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "PaginationResponse.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Pagination\\PaginationResponse.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Pagination\\PaginationResponse.cs",
@@ -1265,7 +1286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "PaginationRequest.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\Pagination\\PaginationRequest.cs",
               "RelativeDocumentMoniker": "Library.DBO\\Pagination\\PaginationRequest.cs",
@@ -1277,7 +1298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Library.API\\Controllers\\UserController.cs",
@@ -1289,7 +1310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "AppException.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Exceptions\\AppException.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Exceptions\\AppException.cs",
@@ -1301,7 +1322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "ApiLoggingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.API\\Middlewares\\ApiLoggingMiddleware.cs",
               "RelativeDocumentMoniker": "Library.API\\Middlewares\\ApiLoggingMiddleware.cs",
@@ -1313,7 +1334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "FeedbackGetDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\FeedbackGetDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\FeedbackGetDto.cs",
@@ -1325,7 +1346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "FeedbackCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\FeedbackCreateDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\FeedbackCreateDto.cs",
@@ -1337,7 +1358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "ErrorMessages.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.BLL\\Helpers\\ErrorMessages.cs",
               "RelativeDocumentMoniker": "Library.BLL\\Helpers\\ErrorMessages.cs",
@@ -1349,7 +1370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "ErrorCode.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\Enums\\ErrorCode.cs",
               "RelativeDocumentMoniker": "Library.Entities\\Enums\\ErrorCode.cs",
@@ -1361,7 +1382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "RentalType.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\Enums\\RentalType.cs",
               "RelativeDocumentMoniker": "Library.Entities\\Enums\\RentalType.cs",
@@ -1373,7 +1394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "Feedback.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\Feedback.cs",
               "RelativeDocumentMoniker": "Library.Entities\\Feedback.cs",
@@ -1385,7 +1406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\ApiResponse.cs",
               "RelativeDocumentMoniker": "Library.DBO\\ApiResponse.cs",
@@ -1397,7 +1418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "ApiLog.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.Entities\\ApiLog.cs",
               "RelativeDocumentMoniker": "Library.Entities\\ApiLog.cs",
@@ -1421,19 +1442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
-              "Title": "BookRentalCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\BookRentalCreateDto.cs",
-              "RelativeDocumentMoniker": "Library.DBO\\BookRentalCreateDto.cs",
-              "ToolTip": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\BookRentalCreateDto.cs",
-              "RelativeToolTip": "Library.DBO\\BookRentalCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:23:13.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "IDesignTimeDbContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DAL\\Context\\IDesignTimeDbContextFactory.cs",
               "RelativeDocumentMoniker": "Library.DAL\\Context\\IDesignTimeDbContextFactory.cs",
@@ -1445,7 +1454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -1457,7 +1466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "BookRentalDto.cs",
               "DocumentMoniker": "C:\\Users\\volunteer12\\Desktop\\Omer\u0027s folder\\LibraryProject-master\\Library.DBO\\BookRentalDto.cs",
               "RelativeDocumentMoniker": "Library.DBO\\BookRentalDto.cs",
